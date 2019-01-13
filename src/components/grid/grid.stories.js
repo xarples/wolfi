@@ -11,8 +11,8 @@ storiesOf('Grid', module)
     },
     template: `
       <row :rounded="true">
-        <column>1</column>
-        <column>2</column>
+        <column width="2">1</column>
+        <column width="2">2</column>
       </row>
     `
   }))

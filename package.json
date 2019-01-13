@@ -15,17 +15,17 @@
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/wolfi.umd.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/wolfi.esm.js",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/wolfi.min.js",
-    "build:static": "build-storybook -c .storybook -o static",
-    "deploy:storybook": "storybook-to-ghpages",
+    "deploy:github": "storybook-to-ghpages",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "start": "start-storybook -p 9000 -c .storybook"
   },
   "dependencies": {
-    "@seregpie/vueflex": "^19.0.0"
+    "simple-xgrid": "^1.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@storybook/addon-options": "^4.1.6",
     "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/vue": "^4.1.6",
     "babel-loader": "^8.0.5",

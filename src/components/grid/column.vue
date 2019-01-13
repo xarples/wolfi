@@ -1,21 +1,38 @@
 <template>
-  <vue-item>
+  <s-col
+    :span="width"
+    :offset="offset"
+    :push="push"
+    :pull="pull"
+  >
     <slot />
-  </vue-item>
+  </s-col>
 </template>
 
 <script>
-import { Item } from '@seregpie/vueflex'
+import Grid from 'simple-xgrid'
 
 export default {
-  components: {
-    VueItem: Item
-  },
   props: {
-
-  }
+    width: {
+      type: Number,
+    },
+    offset: {
+      type: Number,
+    },
+    push: {
+      type: Number,
+    },
+    pull: {
+      type: Number,
+    }
+  },
+  components: {
+    SCol: Grid.Col
+  },
 }
 </script>
 
 <style>
+@import url('../../../node_modules/simple-xgrid/dist/simple-grid.css');
 </style>
