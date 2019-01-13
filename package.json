@@ -18,7 +18,7 @@
     "deploy:github": "storybook-to-ghpages",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
-    "start": "start-storybook -p 9000 -c .storybook"
+    "start": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "simple-xgrid": "^1.2.5"

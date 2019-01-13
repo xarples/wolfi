@@ -1,5 +1,5 @@
 <template>
-  <s-row 
+  <s-row
     :gutter="gutter"
     :align="verticalAlign"
     :justify="horizontalAlign"
@@ -12,6 +12,9 @@
 import Grid from 'simple-xgrid'
 
 export default {
+  components: {
+    SRow: Grid.Row
+  },
   props: {
     gutter: {
       type: Number,
@@ -19,16 +22,15 @@ export default {
     },
     verticalAlign: {
       type: String,
-      default: ''
+      default: 'middle',
+      validator: (val) => ['top', 'middle', 'bottom'].includes(val)
     },
     horizontalAlign: {
       type: String,
-      default: ''
+      default: 'start',
+      validator: (val) => ['start', 'end', 'center', 'space-around', 'space-between'].includes(val)
     }
-  },
-  components: {
-    SRow: Grid.Row
-  },
+  }
 }
 </script>
 

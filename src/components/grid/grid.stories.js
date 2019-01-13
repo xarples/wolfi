@@ -4,15 +4,16 @@ import Row from './row.vue'
 import Column from './column.vue'
 
 storiesOf('Grid', module)
-  .add('story as a component', () => ({
+  .add('default', () => ({
     components: {
-      Row,
-      Column
+      Row: Row,
+      Column: Column
     },
     template: `
-      <row :rounded="true">
-        <column width="2">1</column>
-        <column width="2">2</column>
+      <row :gutter="10">
+        <column :width="8">1</column>
+        <column :width="8">2</column>
+        <column :width="8">3</column>
       </row>
     `
   }))
