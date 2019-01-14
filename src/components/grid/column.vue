@@ -10,7 +10,7 @@
     :md="md"
     :lg="lg"
   >
-    <slot/>
+    <slot />
   </s-col>
 </template>
 
