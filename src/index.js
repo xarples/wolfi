@@ -1,10 +1,14 @@
 // Import vue components
 import * as components from './components/index'
+import theme from './plugins/theme'
 
 // install function executed by Vue.use()
-function install (Vue) {
+function install (Vue, options) {
   if (install.installed) return
   install.installed = true
+
+  Vue.use(theme, options)
+
   Object.keys(components).forEach((componentName) => {
     Vue.component(componentName, components[componentName])
   })
@@ -29,3 +33,6 @@ if (GlobalVue) {
 
 // To allow use as module (npm/webpack/etc.) export components
 export * from './components/index'
+
+// Default export is library as a whole, registered via Vue.use()
+export default plugin

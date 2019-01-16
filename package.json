@@ -1,6 +1,6 @@
 {
   "name": "wolfi",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/wolfi.umd.js",
   "module": "dist/wolfi.esm.js",
@@ -11,7 +11,8 @@
     "!src/lib-dev.vue"
   ],
   "scripts": {
-    "build": "npm-run-all -s lint:fix build:unpkg build:es build:umd",
+    "postinstall": "npm run build",
+    "build": "npm run build:unpkg && npm run build:es && npm run build:umd",
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/wolfi.umd.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/wolfi.esm.js",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/wolfi.min.js",

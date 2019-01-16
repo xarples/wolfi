@@ -12,6 +12,7 @@
 import Grid from 'simple-xgrid'
 
 export default {
+  name: 'WRow',
   components: {
     SRow: Grid.Row
   },
@@ -34,6 +35,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('../../../node_modules/simple-xgrid/dist/simple-grid.css');
 </style>

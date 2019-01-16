@@ -11,8 +11,12 @@ const config = {
   input: 'src/index.js',
   output: {
     name: 'Wolfi',
-    exports: 'named'
+    exports: 'named',
+    globals: {
+      'simple-xgrid': 'Grid'
+    }
   },
+  external: ['simple-xgrid'],
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
@@ -25,7 +29,9 @@ const config = {
         isProduction: true
       }
     }),
-    buble()
+    buble({
+      transforms: { forOf: false }
+    })
   ]
 }
 

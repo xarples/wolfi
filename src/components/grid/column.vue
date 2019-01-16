@@ -18,33 +18,42 @@
 import Grid from 'simple-xgrid'
 
 export default {
+  name: 'WColumn',
   components: {
     SCol: Grid.Col
   },
   props: {
     width: {
-      type: Number
+      type: Number,
+      default: 0
     },
     offset: {
-      type: Number
+      type: Number,
+      default: 0
     },
     push: {
-      type: Number
+      type: Number,
+      default: 0
     },
     pull: {
-      type: Number
+      type: Number,
+      default: 0
     },
     xs: {
-      type: Number || Object
+      type: [Number, Object],
+      default: () => ({})
     },
     sm: {
-      type: Number || Object
+      type: [Number, Object],
+      default: () => ({})
     },
     md: {
-      type: Number || Object
+      type: [Number, Object],
+      default: () => ({})
     },
     lg: {
-      type: Number || Object
+      type: [Number, Object],
+      default: () => ({})
     }
   },
   computed: {
@@ -62,6 +71,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url("../../../node_modules/simple-xgrid/dist/simple-grid.css");
 </style>
