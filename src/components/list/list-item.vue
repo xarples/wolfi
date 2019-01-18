@@ -1,9 +1,11 @@
 <template>
-  <div class="wolfi-list-item" :style="style">
+  <div
+    class="wolfi-list-item"
+    :style="style"
+  >
     <slot />
   </div>
 </template>
-
 
 <script>
 export default {

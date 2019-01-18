@@ -1,11 +1,10 @@
 <template>
-  <hr class="wolfi-divider" />
+  <hr class="wolfi-divider">
 </template>
-
 
 <script>
 export default {
-  name: 'WDivider',
+  name: 'WDivider'
 }
 </script>
 
