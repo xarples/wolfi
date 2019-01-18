@@ -108,6 +108,16 @@ plugin.install = (Vue, options = { theme: {} }) => {
           large: '44px',
           block: '44px'
         }
+      },
+      list: {
+        sizes: {
+          1: {
+            height: '48px'
+          },
+          2: {
+            height: '72px'
+          }
+        }
       }
     }
   }

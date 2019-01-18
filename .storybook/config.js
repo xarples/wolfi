@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import { configure, addDecorator } from '@storybook/vue'
 import { withOptions } from '@storybook/addon-options'
-import { themes } from '@storybook/components'
 
 import wolfi from '../src'
 
@@ -18,7 +17,6 @@ addDecorator(
     name: 'Wolfi',
     url: 'https://github.com/glopezep/wolfi',
     sidebarAnimations: true,
-    theme: themes.dark,
   })
 )
 

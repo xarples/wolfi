@@ -1,6 +1,7 @@
 <template>
   <p
     :variant="variant"
+    :gutter="gutter"
     :style="style"
   >
     <slot />
