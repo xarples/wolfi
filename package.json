@@ -12,10 +12,11 @@
   ],
   "scripts": {
     "postinstall": "npm run build",
-    "build": "npm run lint:fix && npm run build:unpkg && npm run build:es && npm run build:umd",
+    "build": "npm run lint && npm run build:unpkg && npm run build:es && npm run build:umd",
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/wolfi.umd.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/wolfi.esm.js",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/wolfi.min.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "deploy:github": "storybook-to-ghpages",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
@@ -67,5 +68,9 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/glopezep/wolfi.git"
   }
 }
