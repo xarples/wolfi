@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import { configure } from '@storybook/vue'
+import { configure, addDecorator } from '@storybook/vue'
+import { withOptions } from '@storybook/addon-options'
+import { themes } from '@storybook/components'
+
 import wolfi from '../src'
 
 Vue.use(wolfi)
@@ -10,4 +13,15 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
+addDecorator(
+  withOptions({
+    name: 'Wolfi',
+    url: 'https://github.com/glopezep/wolfi',
+    sidebarAnimations: true,
+    theme: themes.dark,
+  })
+)
+
 configure(loadStories, module)
+
+

@@ -7,18 +7,25 @@
     :size="size"
     :style="style"
   >
-    <slot />
+    <w-typography variant="button">
+      <slot />
+    </w-typography>
   </div>
 </template>
 
 <script>
+import WTypography from '../../typography/typography.vue'
+
 export default {
-  name: 'WButton',
+  name: 'WButtonOutline',
+  components: {
+    WTypography
+  },
   props: {
     color: {
       type: String,
       default: 'primary',
-      validator: (val) => ['primary', 'secondary'].includes(val)
+      validator: val => ['primary', 'secondary'].includes(val)
     },
     disabled: {
       type: Boolean,
@@ -26,25 +33,25 @@ export default {
     },
     rounded: {
       type: Boolean,
-      default: true
+      default: false
     },
     size: {
       type: String,
       default: 'large',
-      validator: (val) => ['small', 'medium', 'large', 'block'].includes(val)
+      validator: val => ['small', 'medium', 'large', 'block'].includes(val)
     }
   },
   computed: {
     style () {
+      const { components, colors } = this.$wolfiTheme
       return {
-        'background-color': this.$wolfiTheme.buttons.outline[this.color].background,
-        'border': `2px solid ${this.$wolfiTheme.buttons.outline[this.color].color}`,
+        border: `2px solid ${colors[this.color]}`,
         'border-radius': this.rounded ? '50px' : 0,
-        'cursor': this.disabled && 'not-allowed',
-        'color': this.$wolfiTheme.buttons.outline[this.color].color,
-        'display': this.size !== 'block' && 'inline-flex',
-        'font-size': this.$wolfiTheme.buttons.font.sizes[this.size],
-        'height': this.$wolfiTheme.buttons.sizes[this.size],
+        cursor: this.disabled && 'not-allowed',
+        color: colors[this.color],
+        display: this.size !== 'block' && 'inline-flex',
+        'font-size': components.buttons.font.sizes[this.size],
+        height: components.buttons.sizes[this.size]
       }
     }
   }
