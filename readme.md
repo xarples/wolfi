@@ -9,7 +9,6 @@ The best vuejs components for your apps.
   <img src="/logo.png" alt="Wolfi">
 </p>
 
-
 ## Installation
 
 ``` bash
