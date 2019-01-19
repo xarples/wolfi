@@ -75,5 +75,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/glopezep/wolfi.git"
-  }
+  },
+    "release": {
+      "branch": "develop"
+    }
 }
