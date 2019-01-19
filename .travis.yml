@@ -13,6 +13,8 @@ jobs:
 
     - stage: release
       name: Release
+      script:
+        - make
       deploy:
         provider: script
         skip_cleanup: true
