@@ -12,9 +12,9 @@ branches:
 
 stages:
   - name: release
-    if: branch = develop
+    if: branch = master
   - name: deploy
-    if: branch = develop
+    if: branch = master
 
 jobs:
   include:
