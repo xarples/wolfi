@@ -6,10 +6,6 @@ node_js:
 git:
   depth: 3
 
-branches:
-  only:
-  - master
-
 jobs:
   include:
     - stage: lint
@@ -19,16 +15,19 @@ jobs:
         - commitlint-travis
 
     - stage: changelog
+      if: branch = master
       name: Generate changelog
       script:
         - npm run changelog
 
     - stage: release
+      if: branch = master
       name: Release
       script:
         - npm run semantic-release
 
     - stage: deploy
+      if: branch = master
       name: Storybook deploy
       script:
         npm run deploy:github -- --ci
