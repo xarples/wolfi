@@ -3,5 +3,29 @@ language: node_js
 node_js:
   - '10'
 
-script:
-  - commitlint-travis
+jobs:
+  include:
+    - stage: lint
+      name: Lint
+      script:
+        - npm run lint
+        - commitlint-travis
+
+    - stage: release
+      name: Release
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npm run semantic-release
+
+    - stage: changelog
+      name: Generate changelog
+      script:
+        - npm run changelog
+
+    - stage: storybook-deploy
+      name: Storybook deploy
+      script:
+        npm run deploy:github
+
