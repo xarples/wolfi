@@ -10,12 +10,6 @@ branches:
   only:
   - master
 
-stages:
-  - name: release
-    if: branch = master
-  - name: deploy
-    if: branch = master
-
 jobs:
   include:
     - stage: lint
