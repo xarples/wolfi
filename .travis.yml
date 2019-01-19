@@ -27,6 +27,6 @@ jobs:
     - stage: storybook-deploy
       name: Storybook deploy
       script:
-        npm run deploy:github -- --ci --host-token-env-variable=GITHUB_TOKEN
+        npm run deploy:github -- --ci
 
 
