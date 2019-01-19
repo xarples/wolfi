@@ -1,4 +1,6 @@
 
+<div style="text-align:center"><img src ="/logo.png" /></div>
+
 <h1 align="center">Wolfi</h1>
 
 > The best vuejs components for your apps.
