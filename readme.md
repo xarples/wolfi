@@ -1,7 +1,7 @@
 
 # Wolfi 
 
-> The best vuejs components for your apps.
+The best vuejs components for your apps.
 
 [![Build Status](https://travis-ci.com/glopezep/wolfi.svg?branch=develop)](https://travis-ci.com/glopezep/wolfi)
 

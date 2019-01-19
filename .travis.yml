@@ -3,6 +3,13 @@ language: node_js
 node_js:
   - '10'
 
+git:
+  depth: 3
+
+branches:
+  only:
+  - master
+
 stages:
   - name: release
     if: branch = develop
@@ -12,23 +19,20 @@ stages:
 jobs:
   include:
     - stage: lint
-      name: Lint
+      name: Lint code
       script:
         - npm run lint
         - commitlint-travis
-
-    - stage: release
-      name: Release
-      # deploy:
-      #   provider: script
-      #   skip_cleanup: true
-      script:
-        - npm run semantic-release
 
     - stage: changelog
       name: Generate changelog
       script:
         - npm run changelog
+
+    - stage: release
+      name: Release
+      script:
+        - npm run semantic-release
 
     - stage: deploy
       name: Storybook deploy
