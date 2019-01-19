@@ -27,6 +27,6 @@ jobs:
     - stage: storybook-deploy
       name: Storybook deploy
       script:
-        npm run deploy:github -- --ci
+        npm run deploy:github -- --source-branch=develop --ci
 
 
