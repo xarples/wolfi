@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 <div style="text-align:center"><img src ="/logo.png" /></div>
+=======
+![Scheme](/logo.png)
+>>>>>>> 2fe41e9eae3c5ad0949dc1e597f0937aff4c9730
 
 <h1 align="center">Wolfi</h1>
 
