@@ -1,4 +1,10 @@
 
+
+<p align="center">
+  <img src="/logo.png" alt="Wolfi">
+</p>
+
+
 <div align="center" style="text-align:center"><img src ="/logo.png" /></div>
 
 <h1 align="center">Wolfi</h1>
