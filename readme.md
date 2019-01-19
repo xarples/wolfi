@@ -3,7 +3,7 @@
 
 The best vuejs components for your apps.
 
-[![Build Status](https://travis-ci.com/glopezep/wolfi.svg?branch=develop)](https://travis-ci.com/glopezep/wolfi)
+[![Build Status](https://travis-ci.org/glopezep/wolfi.svg?branch=master)](https://travis-ci.org/glopezep/wolfi)
 
 <p align="center">
   <img src="/logo.png" alt="Wolfi">
