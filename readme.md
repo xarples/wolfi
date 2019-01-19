@@ -1,4 +1,6 @@
 
+![Scheme](/logo.png)
+
 <h1 align="center">Wolfi</h1>
 
 > The best vuejs components for your apps.
