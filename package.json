@@ -1,6 +1,6 @@
 {
   "name": "wolfi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/wolfi.umd.js",
   "module": "dist/wolfi.esm.js",
@@ -35,6 +35,7 @@
     "@storybook/vue": "^4.1.6",
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
+    "conventional-changelog-cli": "^2.0.11",
     "cross-env": "^5.2.0",
     "eslint": "^5.12.0",
     "eslint-config-standard": "^12.0.0",
