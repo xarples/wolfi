@@ -3,6 +3,12 @@ language: node_js
 node_js:
   - '10'
 
+stages:
+  - name: release
+    if: branch = develop
+  - name: deploy
+    if: branch = develop
+
 jobs:
   include:
     - stage: lint
@@ -24,7 +30,7 @@ jobs:
       script:
         - npm run changelog
 
-    - stage: storybook-deploy
+    - stage: deploy
       name: Storybook deploy
       script:
         npm run deploy:github -- --ci
