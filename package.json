@@ -1,6 +1,6 @@
 {
   "name": "wolfi",
-  "version": "0.0.0-development",
+  "version": "0.1.4",
   "description": "",
   "main": "dist/wolfi.umd.js",
   "module": "dist/wolfi.esm.js",
