@@ -13,13 +13,11 @@ jobs:
 
     - stage: release
       name: Release
+      # deploy:
+      #   provider: script
+      #   skip_cleanup: true
       script:
-        - make
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script:
-          - npm run semantic-release
+        - npm run semantic-release
 
     - stage: changelog
       name: Generate changelog
