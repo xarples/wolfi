@@ -3,11 +3,11 @@
 
 [![Build Status](https://travis-ci.com/glopezep/wolfi.svg?branch=develop)](https://travis-ci.com/glopezep/wolfi)
 
-> The best vuejs components for your apps.
-
 <p align="center">
   <img src="/logo.png" alt="Wolfi">
 </p>
+
+> The best vuejs components for your apps.
 
 ## Installation
 
