@@ -1,5 +1,27 @@
-<a name="0.1.2"></a>
-## [0.1.2](https://github.com/glopezep/wolfi/compare/v0.1.1...v0.1.2) (2019-01-19)
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.1.3...v0.1.4) (2019-01-19)
+
+
+### Bug Fixes
+
+* releaserc renamed ([17c29c0](https://github.com/glopezep/wolfi/commit/17c29c0))
+
+
+
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/glopezep/wolfi/compare/v0.1.1...v0.1.3) (2019-01-19)
+
+
+### Bug Fixes
+
+* conflicts fixed ([58a6100](https://github.com/glopezep/wolfi/commit/58a6100))
+* logo updated ([65d6612](https://github.com/glopezep/wolfi/commit/65d6612))
+
+
+### Features
+
+* logo added ([ab50424](https://github.com/glopezep/wolfi/commit/ab50424))
+* logo added ([2fe41e9](https://github.com/glopezep/wolfi/commit/2fe41e9))
 
 
 
