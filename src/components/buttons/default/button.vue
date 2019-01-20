@@ -32,7 +32,6 @@ export default {
         'border-radius': this.rounded ? '50px' : 0,
         cursor: this.disabled && 'not-allowed',
         display: this.size !== 'block' && 'inline-flex',
-        'font-size': this.$wolfiTheme.components.buttons.font.sizes[this.size],
         height: this.$wolfiTheme.components.buttons.sizes[this.size]
       }
     }
@@ -63,9 +62,6 @@ export default {
   cursor: pointer;
   color: white;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 14px;
   justify-content: center;
   text-transform: uppercase;
   padding: 0 2em;
