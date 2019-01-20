@@ -21,6 +21,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "start": "start-storybook -p 9001 -c .storybook",
+    "prepare": "npm run build",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
