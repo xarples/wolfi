@@ -25,7 +25,6 @@ const config = {
       css: true,
       compileTemplate: true,
       template: {
-        optimizeSSR: true,
         isProduction: true
       }
     }),

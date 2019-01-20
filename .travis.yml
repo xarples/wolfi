@@ -16,12 +16,6 @@ jobs:
         - npm run lint
         - commitlint-travis
 
-    - stage: changelog
-      if: branch = master
-      name: Generate changelog
-      script:
-        - npm run changelog
-
     - stage: release
       if: branch = master
       name: Release

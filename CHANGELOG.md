@@ -7,6 +7,7 @@
 * button styles fixed ([c60abfe](https://github.com/glopezep/wolfi/commit/c60abfe))
 * package ([bceded8](https://github.com/glopezep/wolfi/commit/bceded8))
 * package.json ([168f95b](https://github.com/glopezep/wolfi/commit/168f95b))
+* postinstall removed ([3bd6d06](https://github.com/glopezep/wolfi/commit/3bd6d06))
 
 
 ### Features

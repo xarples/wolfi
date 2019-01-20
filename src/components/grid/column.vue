@@ -70,7 +70,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-@import url("../../../node_modules/simple-xgrid/dist/simple-grid.css");
-</style>
