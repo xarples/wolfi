@@ -50,7 +50,6 @@ export default {
         cursor: this.disabled && 'not-allowed',
         color: colors[this.color],
         display: this.size !== 'block' && 'inline-flex',
-        'font-size': components.buttons.font.sizes[this.size],
         height: components.buttons.sizes[this.size]
       }
     }
@@ -63,9 +62,6 @@ export default {
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 14px;
   justify-content: center;
   text-transform: uppercase;
   padding: 0 2em;

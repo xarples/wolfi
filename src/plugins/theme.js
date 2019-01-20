@@ -22,57 +22,57 @@ plugin.install = (Vue, options = { theme: {} }) => {
         },
         headline3: {
           size: '48px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0'
         },
         headline4: {
           size: '34px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.25px'
         },
         headline5: {
           size: '24px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0'
         },
         headline6: {
           size: '20px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.15px'
         },
         subtitle1: {
           size: '16px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.15px'
         },
         subtitle2: {
           size: '14px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.1px'
         },
         body1: {
           size: '16px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.5px'
         },
         body2: {
           size: '14px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.25px'
         },
         button: {
           size: '14px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '1.25px'
         },
         caption: {
           size: '12px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '0.4px'
         },
         overline: {
           size: '10px',
-          weight: 'regular',
+          weight: 'normal',
           letterSpacing: '1.5px'
         }
       }
@@ -93,14 +93,6 @@ plugin.install = (Vue, options = { theme: {} }) => {
           },
           secondary: {
             color: '#394264'
-          }
-        },
-        font: {
-          sizes: {
-            small: '12px',
-            medium: '13px',
-            large: '14px',
-            block: '14px'
           }
         },
         sizes: {
