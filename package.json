@@ -11,7 +11,6 @@
     "!src/lib-dev.vue"
   ],
   "scripts": {
-    "postinstall": "npm run build",
     "build": "npm run build:unpkg && npm run build:es && npm run build:umd",
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/wolfi.umd.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/wolfi.esm.js",
