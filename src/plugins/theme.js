@@ -4,7 +4,8 @@ plugin.install = (Vue, options = { theme: {} }) => {
   const defaultTheme = {
     colors: {
       primary: '#11a8ab',
-      secondary: '#394264'
+      secondary: '#394264',
+      white: '#fff'
     },
     fonts: {
       family: 'Roboto, Arial, sans-serif',
