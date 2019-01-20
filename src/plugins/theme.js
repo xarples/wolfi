@@ -113,7 +113,7 @@ plugin.install = (Vue, options = { theme: {} }) => {
       list: {
         sizes: {
           1: {
-            height: '48px'
+            height: '40px'
           },
           2: {
             height: '72px'
