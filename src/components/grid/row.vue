@@ -35,5 +35,6 @@ export default {
 }
 </script>
 
-<style src="simple-xgrid/dist/simple-grid.css">
+<style scoped>
+  @import url('../../../node_modules/simple-xgrid/dist/simple-grid.css');
 </style>

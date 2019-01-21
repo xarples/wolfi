@@ -1,5 +1,5 @@
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.1...v0.1.4) (2019-01-20)
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.1...v0.1.4) (2019-01-21)
 
 
 ### Bug Fixes
@@ -8,6 +8,7 @@
 * package ([bceded8](https://github.com/glopezep/wolfi/commit/bceded8))
 * package.json ([168f95b](https://github.com/glopezep/wolfi/commit/168f95b))
 * postinstall removed ([3bd6d06](https://github.com/glopezep/wolfi/commit/3bd6d06))
+* server side support fixed ([1dea780](https://github.com/glopezep/wolfi/commit/1dea780))
 
 
 ### Features
