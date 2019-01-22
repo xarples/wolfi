@@ -29,3 +29,15 @@ import Wolfi from 'wolfi'
 
 Vue.use(Wolfi)
 ```
+
+## Live Playground
+
+For examples of the wolfi in action, go to https://glopezep.github.io/wolfi.
+
+OR
+
+To run that demo on your own computer:
+* Clone this repository
+* `npm install`
+* `npm start`
+* Visit http://localhost:9001/

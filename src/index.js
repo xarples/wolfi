@@ -15,11 +15,9 @@ function install (Vue, options) {
 }
 
 // Create module definition for Vue.use()
-// const plugin = {
-//   install
-// }
-
-const plugin = Object.assign({}, components, { install })
+const plugin = {
+  install
+}
 
 // To auto-install when vue is found
 /* global window global */

@@ -2,3 +2,4 @@ node_modules
 dist
 static
 logo.ai
+.DS_Store

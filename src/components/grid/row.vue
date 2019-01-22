@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import Grid from 'simple-xgrid'
+import Grid from 'simple-xgrid/'
+import 'simple-xgrid/dist/simple-grid.css'
 
 export default {
   name: 'WRow',
@@ -35,6 +36,5 @@ export default {
 }
 </script>
 
-<style scoped>
-  @import url('../../../node_modules/simple-xgrid/dist/simple-grid.css');
+<style src="simple-xgrid/dist/simple-grid.css">
 </style>
