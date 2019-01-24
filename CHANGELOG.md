@@ -1,15 +1,43 @@
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.1...v0.1.4) (2019-01-22)
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-24)
+
+
+### Features
+
+* server side support added ([521c853](https://github.com/glopezep/wolfi/commit/521c853))
+
+
+
+<a name="0.3.6"></a>
+## [0.3.6](https://github.com/glopezep/wolfi/compare/v0.3.5...v0.3.6) (2019-01-21)
+
+
+### Bug Fixes
+
+* components fixed ([f7b637d](https://github.com/glopezep/wolfi/commit/f7b637d))
+
+
+
+<a name="0.3.5"></a>
+## [0.3.5](https://github.com/glopezep/wolfi/compare/v0.3.4...v0.3.5) (2019-01-20)
+
+
+### Bug Fixes
+
+* server side support fixed ([1dea780](https://github.com/glopezep/wolfi/commit/1dea780))
+
+
+
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/glopezep/wolfi/compare/v0.3.3...v0.3.4) (2019-01-20)
 
 
 ### Bug Fixes
 
 * button styles fixed ([c60abfe](https://github.com/glopezep/wolfi/commit/c60abfe))
-* components fixed ([f7b637d](https://github.com/glopezep/wolfi/commit/f7b637d))
 * package ([bceded8](https://github.com/glopezep/wolfi/commit/bceded8))
 * package.json ([168f95b](https://github.com/glopezep/wolfi/commit/168f95b))
 * postinstall removed ([3bd6d06](https://github.com/glopezep/wolfi/commit/3bd6d06))
-* server side support fixed ([1dea780](https://github.com/glopezep/wolfi/commit/1dea780))
 
 
 ### Features

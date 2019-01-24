@@ -54,7 +54,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .wolfi-button {
   align-items: center;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
