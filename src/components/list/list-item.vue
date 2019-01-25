@@ -26,6 +26,6 @@ export default {
   .wolfi-list-item {
     align-items: center;
     display: flex;
-    margin: 0 16px;
+    padding: 0 16px;
   }
 </style>

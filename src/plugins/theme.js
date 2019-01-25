@@ -79,22 +79,6 @@ plugin.install = (Vue, options = { theme: {} }) => {
     },
     components: {
       buttons: {
-        default: {
-          primary: {
-            color: '#fff'
-          },
-          secondary: {
-            color: '#fff'
-          }
-        },
-        outline: {
-          primary: {
-            color: '#11a8ab'
-          },
-          secondary: {
-            color: '#394264'
-          }
-        },
         sizes: {
           small: '28px',
           medium: '36px',
@@ -105,7 +89,7 @@ plugin.install = (Vue, options = { theme: {} }) => {
       list: {
         sizes: {
           1: {
-            height: '40px'
+            height: '48px'
           },
           2: {
             height: '72px'

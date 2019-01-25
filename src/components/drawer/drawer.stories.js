@@ -6,7 +6,7 @@ storiesOf('Drawer', module)
       <w-drawer>
         <w-drawer-header>
           <w-typography variant="headline6">Main</w-typography gutter>
-          <w-typography variant="body2">email@material.io</w-typography>
+          <w-typography variant="body2">email@test.io</w-typography>
         </w-drawer-header>
         <w-drawer-content>
           <w-list>

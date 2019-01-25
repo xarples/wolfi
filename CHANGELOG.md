@@ -1,10 +1,11 @@
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-24)
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-25)
 
 
 ### Bug Fixes
 
 * button styles scoped ([ab0dc8a](https://github.com/glopezep/wolfi/commit/ab0dc8a))
+* doc fixed ([594e90d](https://github.com/glopezep/wolfi/commit/594e90d))
 
 
 ### Features
