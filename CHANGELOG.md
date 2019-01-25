@@ -6,10 +6,12 @@
 
 * button styles scoped ([ab0dc8a](https://github.com/glopezep/wolfi/commit/ab0dc8a))
 * doc fixed ([594e90d](https://github.com/glopezep/wolfi/commit/594e90d))
+* fix buttom import ([0bbe42f](https://github.com/glopezep/wolfi/commit/0bbe42f))
 
 
 ### Features
 
+* dialog component added ([ef70a45](https://github.com/glopezep/wolfi/commit/ef70a45))
 * server side support added ([521c853](https://github.com/glopezep/wolfi/commit/521c853))
 
 

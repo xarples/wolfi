@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import WButtonFlat from '../buttons/flat/button-flat'
+import WButtonFlat from '../buttons/flat/button-flat.vue'
 export default {
   name: 'WDialog',
   components: {
