@@ -9,6 +9,17 @@ The best vuejs components for your apps.
 
 [![Build Status](https://travis-ci.org/glopezep/wolfi.svg?branch=master)](https://travis-ci.org/glopezep/wolfi)
 
+## Live Playground
+
+For examples of the wolfi in action, go to https://glopezep.github.io/wolfi.
+
+OR
+
+To run that demo on your own computer:
+* Clone this repository
+* `npm install`
+* `npm start`
+* Visit http://localhost:9001/
 
 ## Quick-start
 
@@ -56,15 +67,12 @@ import 'wolfi/dist/wolfi.min.css'
 Vue.use(Wolfi)
 ```
 
-## Live Playground
+## Compatibility
 
-For examples of the wolfi in action, go to https://glopezep.github.io/wolfi.
-
-OR
-
-To run that demo on your own computer:
-* Clone this repository
-* `npm install`
-* `npm start`
-* Visit http://localhost:9001/
-
+- Supports Vue.js 2.x
+- Supports Vue.js 1.x - [visit 1.0 docs](http://v1.iviewui.com/)
+- Supports SSR
+- Supports [Nuxt.js](https://nuxtjs.org/)
+- Supports TypeScript
+- Supports [Electron](http://electron.atom.io/)
+- Most components and features support IE9 and above browsers, some components and features do not support IE

@@ -6,7 +6,7 @@
 
 * button styles scoped ([ab0dc8a](https://github.com/glopezep/wolfi/commit/ab0dc8a))
 * doc fixed ([594e90d](https://github.com/glopezep/wolfi/commit/594e90d))
-* fix buttom import ([0bbe42f](https://github.com/glopezep/wolfi/commit/0bbe42f))
+* fix button import ([3af9087](https://github.com/glopezep/wolfi/commit/3af9087))
 
 
 ### Features
