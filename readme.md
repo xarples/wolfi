@@ -70,7 +70,6 @@ Vue.use(Wolfi)
 ## Compatibility
 
 - Supports Vue.js 2.x
-- Supports Vue.js 1.x - [visit 1.0 docs](http://v1.iviewui.com/)
 - Supports SSR
 - Supports [Nuxt.js](https://nuxtjs.org/)
 - Supports TypeScript
