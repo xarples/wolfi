@@ -35,7 +35,8 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "simple-xgrid": "^1.2.5"
+    "simple-xgrid": "^1.2.5",
+    "vue-awesome": "^3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

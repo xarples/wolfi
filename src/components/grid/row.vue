@@ -3,14 +3,14 @@
     :gutter="gutter"
     :align="verticalAlign"
     :justify="horizontalAlign"
+    type="flex"
   >
     <slot />
   </s-row>
 </template>
 
 <script>
-import Grid from 'simple-xgrid/'
-import 'simple-xgrid/dist/simple-grid.css'
+import Grid from 'simple-xgrid'
 
 export default {
   name: 'WRow',
@@ -24,7 +24,7 @@ export default {
     },
     verticalAlign: {
       type: String,
-      default: 'middle',
+      default: 'top',
       validator: (val) => ['top', 'middle', 'bottom'].includes(val)
     },
     horizontalAlign: {

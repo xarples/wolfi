@@ -1,5 +1,5 @@
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-25)
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-26)
 
 
 ### Bug Fixes

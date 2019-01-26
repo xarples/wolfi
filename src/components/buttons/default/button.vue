@@ -1,3 +1,19 @@
+<template>
+  <div
+    class="wolfi-button"
+    :color="color"
+    :disabled="disabled"
+    :rounded="rounded"
+    :size="size"
+    :style="style"
+    @click="$emit('click', $event)"
+  >
+    <w-typography variant="button">
+      <slot />
+    </w-typography>
+  </div>
+</template>
+
 <script>
 import WTypography from '../../typography/typography.vue'
 export default {
@@ -38,21 +54,6 @@ export default {
   }
 }
 </script>
-
-<template>
-  <div
-    class="wolfi-button"
-    :color="color"
-    :disabled="disabled"
-    :rounded="rounded"
-    :size="size"
-    :style="style"
-  >
-    <w-typography variant="button">
-      <slot />
-    </w-typography>
-  </div>
-</template>
 
 <style scoped>
 .wolfi-button {

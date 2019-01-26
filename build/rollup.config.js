@@ -20,13 +20,9 @@ const config = {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    resolve({
-      jsnext: true
+    css({
+      output: 'wolfi.css'
     }),
-    commonjs({
-      include: 'node_modules/**'
-    }),
-    css(),
     vue({
       css: false,
       compileTemplate: true,
@@ -41,9 +37,26 @@ const config = {
   ]
 }
 
+if (argv.format !== 'iife') {
+  config.external = [
+    'simple-xgrid',
+    'vue-awesome/icons',
+    'vue-awesome/components/Icon.vue'
+  ]
+  config.output.globals = {
+    'simple-xgrid': 'Grid',
+    'vue-awesome/components/Icon.vue': 'VIcon'
+  }
+}
+
 // Only minify browser (iife) version
 if (argv.format === 'iife') {
-  config.plugins.push(uglify())
+  config.plugins = [
+    ...config.plugins,
+    resolve(),
+    commonjs(),
+    uglify()
+  ]
 }
 
 export default config

@@ -6,6 +6,7 @@
     :rounded="rounded"
     :size="size"
     :style="style"
+    @click="$emit('click', $event)"
   >
     <w-typography variant="button">
       <slot />

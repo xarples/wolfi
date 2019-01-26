@@ -1,18 +1,30 @@
 <template>
   <div class="wolfi-dialog">
-    <slot />
+    <w-typography
+      variant="headline6"
+      gutter
+    >
+      {{ title }}
+    </w-typography>
+    <w-typography
+      variant="body2"
+      gutter
+    >
+      {{ description }}
+    </w-typography>
+    <div :style="{ height: '20px' }" />
     <div class="wolfi-dialog-actions">
       <w-button-flat
         size="medium"
         @click="$emit('cancelClick', $event)"
       >
-        {{ cancelMessage }}
+        {{ cancelLabel }}
       </w-button-flat>
       <w-button-flat
         size="medium"
         @click="$emit('confirmClick', $event)"
       >
-        {{ confirmMessage }}
+        {{ confirmLabel }}
       </w-button-flat>
     </div>
   </div>
@@ -26,11 +38,19 @@ export default {
     WButtonFlat
   },
   props: {
-    cancelMessage: {
+    title: {
+      type: String,
+      default: ''
+    },
+    description: {
+      type: String,
+      default: ''
+    },
+    cancelLabel: {
       type: String,
       default: 'Cancel'
     },
-    confirmMessage: {
+    confirmLabel: {
       type: String,
       default: 'Confirm'
     }
@@ -42,14 +62,16 @@ export default {
   .wolfi-dialog {
     box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
     background: #fff;
+    box-sizing: border-box;
+    min-height: 170px;
+    max-width: 568px;
     padding: 24px;
     position: relative;
-    height: 162px;
-    width: 568px;
+    width: 100%;
   }
 
   .wolfi-dialog-actions {
-    bottom: 24px;
+    bottom: 10px;
     position: absolute;
     right: 24px;
   }
