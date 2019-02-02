@@ -1,8 +1,10 @@
 <template>
-  <v-icon
-    :name="name"
-    :scale="scale"
-  />
+  <span :style="style">
+    <v-icon
+      :name="name"
+      :scale="scale"
+    />
+  </span>
 </template>
 
 <script>
@@ -25,6 +27,17 @@ export default {
     scale: {
       type: [String, Number],
       default: 1
+    },
+    color: {
+      type: String,
+      default: 'primary'
+    }
+  },
+  computed: {
+    style () {
+      return {
+        color: this.$wolfiTheme.colors[this.color]
+      }
     }
   }
 }

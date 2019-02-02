@@ -12,6 +12,7 @@
 ### Features
 
 * dialog component added ([ef70a45](https://github.com/glopezep/wolfi/commit/ef70a45))
+* form components added ([eb0a13a](https://github.com/glopezep/wolfi/commit/eb0a13a))
 * new components added ([7e59068](https://github.com/glopezep/wolfi/commit/7e59068))
 * server side support added ([521c853](https://github.com/glopezep/wolfi/commit/521c853))
 

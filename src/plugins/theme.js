@@ -3,8 +3,12 @@ const plugin = {}
 plugin.install = (Vue, options = { theme: {} }) => {
   const defaultTheme = {
     colors: {
-      primary: '#11a8ab',
-      secondary: '#394264',
+      primary: '#5f6cd4',
+      secondary: '#495268',
+      success: '#05d2a5',
+      error: '#cf092d',
+      warning: '#ffcc5c',
+      info: '#81b9c3',
       white: '#fff'
     },
     fonts: {
