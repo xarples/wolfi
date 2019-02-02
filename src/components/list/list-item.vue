@@ -28,4 +28,9 @@ export default {
     display: flex;
     padding: 0 16px;
   }
+
+  .wolfi-list-item:hover {
+    background-color: #eeeeee6b;
+  }
+
 </style>

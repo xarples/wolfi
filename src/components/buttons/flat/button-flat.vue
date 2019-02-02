@@ -41,6 +41,7 @@ export default {
     style () {
       const { components, colors } = this.$wolfiTheme
       return {
+        // 'background-color': this.$wolfiTheme.colors[this.color],
         cursor: this.disabled && 'not-allowed',
         color: colors[this.color],
         display: this.size !== 'block' && 'inline-flex',
@@ -57,7 +58,15 @@ export default {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  transition: all ease .2s;
   text-transform: uppercase;
   padding: 0 1em;
+}
+.wolfi-button:hover {
+  background-color: #eeeeee6b;
+}
+
+.wolfi-button:active {
+  filter: brightness(95%);
 }
 </style>

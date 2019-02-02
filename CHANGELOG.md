@@ -1,5 +1,5 @@
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-01-26)
+## [0.1.4](https://github.com/glopezep/wolfi/compare/v0.3.6...v0.1.4) (2019-02-02)
 
 
 ### Bug Fixes
@@ -12,6 +12,7 @@
 ### Features
 
 * dialog component added ([ef70a45](https://github.com/glopezep/wolfi/commit/ef70a45))
+* new components added ([7e59068](https://github.com/glopezep/wolfi/commit/7e59068))
 * server side support added ([521c853](https://github.com/glopezep/wolfi/commit/521c853))
 
 

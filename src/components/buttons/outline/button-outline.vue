@@ -64,7 +64,15 @@ export default {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  transition: all ease .2s;
   text-transform: uppercase;
   padding: 0 2em;
+}
+.wolfi-button:hover {
+  background-color: #eeeeee6b;
+}
+
+.wolfi-button:active {
+  filter: brightness(95%);
 }
 </style>

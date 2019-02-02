@@ -21,7 +21,7 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     css({
-      output: 'wolfi.css'
+      output: './dist/wolfi.min.css'
     }),
     vue({
       css: false,
@@ -31,7 +31,7 @@ const config = {
       }
     }),
     buble({
-      objectAssign: 'angular.extend',
+      objectAssign: 'Object.assign',
       transforms: { forOf: false }
     })
   ]
