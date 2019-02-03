@@ -7,7 +7,7 @@
 
 The best vuejs components for your apps.
 
-[![Build Status](https://travis-ci.org/glopezep/wolfi.svg?branch=master)](https://travis-ci.org/glopezep/wolfi)
+[![Build Status](https://travis-ci.org/xarples/wolfi.svg?branch=master)](https://travis-ci.org/xarples/wolfi)
 
 ## Live Playground
 
