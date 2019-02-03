@@ -1,6 +1,7 @@
 {
   "name": "@xarples/wolfi",
   "version": "0.8.0",
+  "private": false,
   "description": "The best vuejs components for your apps.",
   "author": "Xarples",
   "keywords": [
