@@ -1,6 +1,6 @@
 <!--
 MAKE SURE TO READ THE CONTRIBUTING GUIDE BEFORE CREATING A PR
-https://github.com/glopezep/wolfi/blob/master/.github/CONTRIBUTING.md
+https://github.com/xarples/wolfi/blob/master/.github/CONTRIBUTING.md
 
 Testing and markup sections can be removed for documentation changes
 -->

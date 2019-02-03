@@ -1,8 +1,8 @@
 {
-  "name": "wolfi",
-  "version": "0.1.4",
+  "name": "@xarples/wolfi",
+  "version": "0.8.0",
   "description": "The best vuejs components for your apps.",
-  "author": "Wolfi Team",
+  "author": "Xarples",
   "keywords": [
     "vue",
     "vue-components",
@@ -10,16 +10,15 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glopezep/wolfi/issues"
+    "url": "https://github.com/xarples/wolfi/issues"
   },
-  "homepage": "https://glopezep.github.io/wolfi",
+  "homepage": "https://xarples.github.io/wolfi",
   "main": "dist/wolfi.umd.js",
   "module": "dist/wolfi.esm.js",
   "unpkg": "dist/wolfi.min.js",
   "files": [
     "dist/*",
-    "src/*",
-    "server/*"
+    "src/*"
   ],
   "scripts": {
     "build": "npm run build:unpkg && npm run build:es && npm run build:umd",
@@ -92,7 +91,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/glopezep/wolfi.git"
+    "url": "https://github.com/xarples/wolfi.git"
   },
   "release": {
     "branch": "master"
