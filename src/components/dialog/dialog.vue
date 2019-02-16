@@ -1,41 +1,9 @@
-<template>
-  <div class="wolfi-dialog">
-    <w-typography
-      variant="headline6"
-      gutter
-    >
-      {{ title }}
-    </w-typography>
-    <w-typography
-      variant="body2"
-      gutter
-    >
-      {{ description }}
-    </w-typography>
-    <div :style="{ height: '20px' }" />
-    <div class="wolfi-dialog-actions">
-      <w-button-flat
-        size="medium"
-        @click="$emit('cancelClick', $event)"
-      >
-        {{ cancelLabel }}
-      </w-button-flat>
-      <w-button-flat
-        size="medium"
-        @click="$emit('confirmClick', $event)"
-      >
-        {{ confirmLabel }}
-      </w-button-flat>
-    </div>
-  </div>
-</template>
-
 <script>
-import WButtonFlat from '../buttons/flat/button-flat.vue'
+import WButton from '../button/button.vue'
 export default {
   name: 'WDialog',
   components: {
-    WButtonFlat
+    WButton
   },
   props: {
     title: {
@@ -58,21 +26,67 @@ export default {
 }
 </script>
 
-<style scoped>
-  .wolfi-dialog {
-    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
-    background: #fff;
-    box-sizing: border-box;
-    min-height: 170px;
-    max-width: 568px;
-    padding: 24px;
-    position: relative;
-    width: 100%;
-  }
+<template>
+  <div class="wolfi-dialog">
+    <div class="title-container">
+      <w-typography
+        variant="headline6"
+        gutter
+      >
+        {{ title }}
+      </w-typography>
+    </div>
+    <div class="description-container">
+      <w-typography
+        variant="body2"
+        gutter
+      >
+        {{ description }}
+      </w-typography>
+    </div>
+    <div class="wolfi-dialog-actions">
+      <w-button
+        size="small"
+        variant="text"
+        @click="$emit('cancelClick', $event)"
+      >
+        {{ cancelLabel }}
+      </w-button>
+      <w-button
+        size="small"
+        variant="text"
+        @click="$emit('confirmClick', $event)"
+      >
+        {{ confirmLabel }}
+      </w-button>
+    </div>
+  </div>
+</template>
 
-  .wolfi-dialog-actions {
-    bottom: 10px;
-    position: absolute;
-    right: 24px;
-  }
+<style scoped>
+.title-container {
+  padding: 24px 24px 20px;
+}
+
+.description-container {
+  padding: 0 24px 20px;
+  opacity: .6;
+}
+.wolfi-dialog {
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 170px;
+  max-width: 568px;
+  margin: 2em;
+  width: 100%;
+}
+
+.wolfi-dialog-actions {
+  align-items: center;
+  display: flex;
+  height: 52px;
+  padding: 0 8px;
+  justify-content: flex-end;
+}
 </style>

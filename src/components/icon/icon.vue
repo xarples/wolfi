@@ -19,10 +19,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: null,
-      validator: (val) => [
-        'file'
-      ].includes(val)
+      default: null
     },
     scale: {
       type: [String, Number],
@@ -30,7 +27,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'primary'
+      default: 'white'
     }
   },
   computed: {
