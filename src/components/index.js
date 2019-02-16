@@ -1,6 +1,4 @@
-export { default as WButton } from './buttons/default/button.vue'
-export { default as WButtonOutline } from './buttons/outline/button-outline.vue'
-export { default as WButtonFlat } from './buttons/flat/button-flat.vue'
+export { default as WButton } from './button/button.vue'
 export { default as WCard } from './card/card.vue'
 export { default as WCardContent } from './card/card-content.vue'
 export { default as WCardImage } from './card/card-image.vue'
