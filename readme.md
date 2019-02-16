@@ -11,7 +11,7 @@ The best vuejs components for your apps.
 
 ## Live Playground
 
-For examples of the wolfi in action, go to https://glopezep.github.io/wolfi.
+For examples of the wolfi in action, go to https://xarples.github.io/wolfi
 
 OR
 
