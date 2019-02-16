@@ -1,3 +1,5 @@
+
+export { default as WAvatar } from './avatar/avatar.vue'
 export { default as WButton } from './button/button.vue'
 export { default as WCard } from './card/card.vue'
 export { default as WCardContent } from './card/card-content.vue'

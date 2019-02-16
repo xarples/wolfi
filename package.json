@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "simple-xgrid": "^1.2.5",
+    "vue-avatar": "^2.1.7",
     "vue-awesome": "^3.3.1"
   },
   "devDependencies": {
