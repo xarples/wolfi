@@ -82,12 +82,11 @@ plugin.install = (Vue, options = { theme: {} }) => {
       }
     },
     components: {
-      buttons: {
+      button: {
         sizes: {
-          small: '28px',
+          small: '30px',
           medium: '36px',
-          large: '44px',
-          block: '44px'
+          large: '42px'
         }
       },
       list: {
