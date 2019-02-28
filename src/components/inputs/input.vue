@@ -3,6 +3,9 @@
     class="wolfi-input"
     :placeholder="placeholder"
     :style="style"
+    :variant="variant"
+    :height="height"
+    :fullWidth="fullWidth"
     @focus="focus = true"
     @blur="focus = false"
   >
@@ -16,9 +19,18 @@ export default {
       type: String,
       default: ''
     },
-    width: {
+    fullWidth: {
+      type: Boolean,
+      default: false
+    },
+    height: {
       type: String,
-      default: '300px'
+      default: '56px'
+    },
+    variant: {
+      type: String,
+      default: 'outline',
+      validator: val => ['default', 'outline'].includes(val)
     }
   },
   data () {
@@ -27,10 +39,24 @@ export default {
     }
   },
   computed: {
+    default () {
+      return {
+        'border-bottom': '2px solid silver'
+      }
+    },
+    outline () {
+      return {
+        'border': '2px solid silver',
+        borderRadius: '4px',
+        padding: '8px 12px'
+      }
+    },
     style () {
       return {
-        'border-bottom-color': this.focus ? this.$wolfiTheme.colors.primary : 'silver',
-        width: this.width
+        'border-color': this.focus ? this.$wolfiTheme.colors.primary : 'silver',
+        width: this.fullWidth ? '100%' : 'inherit',
+        height: this.height,
+        ...this[this.variant]
       }
     }
   }
@@ -41,11 +67,10 @@ export default {
 .wolfi-input {
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid black;
   font-size: 16px;
   font-family: Roboto;
-  height: 32px;
-  padding: 8px 0;
+  min-width: 280px;
+  padding: 8px 0px;
 }
 .wolfi-input:focus {
   outline: none;
