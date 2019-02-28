@@ -1,6 +1,13 @@
 import { storiesOf } from '@storybook/vue'
+import { withKnobs } from '@storybook/addon-knobs'
+import VueInfoAddon from 'storybook-addon-vue-info'
 
-storiesOf('Forms', module)
+const stories = storiesOf('Forms', module)
+
+stories.addDecorator(withKnobs)
+stories.addDecorator(VueInfoAddon)
+
+stories
   .add('input', () => ({
     template: `
       <div>

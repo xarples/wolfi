@@ -14,7 +14,7 @@ export default {
     lines: {
       type: Number,
       default: 1,
-      validator: val => [1, 2].includes(val)
+      validator: val => [1, 2, 3].includes(val)
     }
   }
 }

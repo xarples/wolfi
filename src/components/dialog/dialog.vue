@@ -46,14 +46,14 @@ export default {
     </div>
     <div class="wolfi-dialog-actions">
       <w-button
-        size="small"
+        size="medium"
         variant="text"
         @click="$emit('cancelClick', $event)"
       >
         {{ cancelLabel }}
       </w-button>
       <w-button
-        size="small"
+        size="medium"
         variant="text"
         @click="$emit('confirmClick', $event)"
       >

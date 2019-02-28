@@ -1,8 +1,15 @@
-import { storiesOf } from '@storybook/vue'
 
-storiesOf('Card', module)
-  .add('default', () => ({
-    template: `
+import { storiesOf } from '@storybook/vue'
+import { withKnobs } from '@storybook/addon-knobs'
+import VueInfoAddon from 'storybook-addon-vue-info'
+
+const stories = storiesOf('Card', module)
+
+stories.addDecorator(withKnobs)
+stories.addDecorator(VueInfoAddon)
+
+stories.add('default', () => ({
+  template: `
       <div>
         <w-row>
           <w-column :push="7" :width="10" style="padding: 1em">
@@ -21,4 +28,4 @@ storiesOf('Card', module)
         </w-row>
       </div>
     `
-  }))
+}))

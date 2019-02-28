@@ -1,6 +1,13 @@
 import { storiesOf } from '@storybook/vue'
+import { withKnobs } from '@storybook/addon-knobs'
+import VueInfoAddon from 'storybook-addon-vue-info'
 
-storiesOf('Stepper', module)
+const stories = storiesOf('Stepper', module)
+
+stories.addDecorator(withKnobs)
+stories.addDecorator(VueInfoAddon)
+
+stories
   .add('default', () => ({
     data () {
       return {

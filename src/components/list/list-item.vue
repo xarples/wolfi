@@ -15,7 +15,7 @@ export default {
       const listLines = this.$parent.lines
 
       return {
-        height: this.$wolfiTheme.components.list.sizes[listLines].height
+        minHeight: this.$wolfiTheme.components.list.sizes[listLines].height
       }
     }
   }
@@ -25,8 +25,9 @@ export default {
 <style scoped>
   .wolfi-list-item {
     align-items: center;
+    box-sizing: border-box;
     display: flex;
-    padding: 0 16px;
+    padding: 12px 16px;
   }
 
   .wolfi-list-item:hover {

@@ -84,9 +84,9 @@ plugin.install = (Vue, options = { theme: {} }) => {
     components: {
       button: {
         sizes: {
-          small: '30px',
+          small: '28px',
           medium: '36px',
-          large: '42px'
+          large: '44px'
         }
       },
       list: {
@@ -95,7 +95,10 @@ plugin.install = (Vue, options = { theme: {} }) => {
             height: '48px'
           },
           2: {
-            height: '72px'
+            height: '64px'
+          },
+          3: {
+            height: '88px'
           }
         }
       }

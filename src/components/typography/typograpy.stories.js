@@ -1,6 +1,13 @@
 import { storiesOf } from '@storybook/vue'
+import { withKnobs } from '@storybook/addon-knobs'
+import VueInfoAddon from 'storybook-addon-vue-info'
 
-storiesOf('Typography', module)
+const stories = storiesOf('Typography', module)
+
+stories.addDecorator(withKnobs)
+stories.addDecorator(VueInfoAddon)
+
+stories
   .add('default', () => ({
     template: `
       <div>
