@@ -22,8 +22,8 @@ export default {
     style () {
       return {
         display: 'inline-block',
-        height: `${this.height}${this.height !== 'string' && 'px'}`,
-        width: `${this.width}${this.width !== 'string' && 'px'}`
+        height: `${this.height}${typeof this.height !== 'string' && 'px'}`,
+        width: `${this.width}${typeof this.width !== 'string' && 'px'}`
       }
     }
   }
