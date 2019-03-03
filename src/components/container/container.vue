@@ -18,7 +18,11 @@ export default {
       type: [String, Number],
       default: 0
     },
-    paddingLateral: {
+    paddingHorizontal: {
+      type: [String, Number],
+      default: 0
+    },
+    paddingVertical: {
       type: [String, Number],
       default: 0
     }
@@ -27,8 +31,10 @@ export default {
     container () {
       return {
         backgroundColor: this.$wolfiTheme.colors[this.backgroundColor],
-        paddingLeft: `${this.paddingLateral}${this.paddingLateral !== 'string' && 'px'}`,
-        paddingRight: `${this.paddingLateral}${this.paddingLateral !== 'string' && 'px'}`
+        paddingTop: `${this.paddingVertical}${typeof this.paddingVertical !== 'string' && 'px'}`,
+        paddingBottom: `${this.paddingVertical}${typeof this.paddingVertical !== 'string' && 'px'}`,
+        paddingLeft: `${this.paddingHorizontal}${typeof this.paddingHorizontal !== 'string' && 'px'}`,
+        paddingRight: `${this.paddingHorizontal}${typeof this.paddingHorizontal !== 'string' && 'px'}`
       }
     },
     containerChild () {
