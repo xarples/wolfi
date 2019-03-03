@@ -9,7 +9,9 @@ plugin.install = (Vue, options = { theme: {} }) => {
       error: '#cf092d',
       warning: '#ffcc5c',
       info: '#81b9c3',
-      white: '#fff'
+      white: '#fff',
+      black: '#000',
+      silver: '#FAFBFC'
     },
     fonts: {
       family: 'Roboto, Arial, sans-serif',
