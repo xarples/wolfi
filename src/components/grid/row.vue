@@ -1,23 +1,11 @@
-<template>
-  <s-row
-    :gutter="gutter"
-    :align="verticalAlign"
-    :justify="horizontalAlign"
-    type="flex"
-  >
-    <slot />
-  </s-row>
-</template>
-
 <script>
-import Grid from 'simple-xgrid'
-
 export default {
   name: 'WRow',
-  components: {
-    SRow: Grid.Row
-  },
   props: {
+    columns: {
+      type: Number,
+      default: 12
+    },
     gutter: {
       type: Number,
       default: 0
@@ -25,16 +13,37 @@ export default {
     verticalAlign: {
       type: String,
       default: 'top',
-      validator: (val) => ['top', 'middle', 'bottom'].includes(val)
+      validator: val => ['top', 'center', 'bottom'].includes(val)
+    }
+  },
+  computed: {
+    align () {
+      const alignments = {
+        top: 'flex-start',
+        center: 'center',
+        bottom: 'flex-end'
+      }
+
+      return alignments[this.verticalAlign]
     },
-    horizontalAlign: {
-      type: String,
-      default: 'start',
-      validator: (val) => ['start', 'end', 'center', 'space-around', 'space-between'].includes(val)
+    style () {
+      return {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: this.align
+      }
     }
   }
 }
 </script>
 
-<style src="simple-xgrid/dist/simple-grid.css">
-</style>
+<template>
+  <div
+    :style="style"
+    :columns="columns"
+    :gutter="gutter"
+    :verticalAlign="verticalAlign"
+  >
+    <slot />
+  </div>
+</template>

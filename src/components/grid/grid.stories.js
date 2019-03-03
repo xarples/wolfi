@@ -10,10 +10,12 @@ stories.addDecorator(VueInfoAddon)
 stories
   .add('default', () => ({
     template: `
-      <w-row :gutter="10">
-        <w-column :width="8">1</w-column>
-        <w-column :width="8">2</w-column>
-        <w-column :width="8">3</w-column>
-      </w-row>
+      <w-container :max-width="1280">
+        <w-row>
+          <w-column :width="4">1</w-column>
+          <w-column :width="4">2</w-column>
+          <w-column :width="4">3</w-column>
+        </w-row>
+      </w-container>
     `
   }))

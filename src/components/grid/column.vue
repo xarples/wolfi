@@ -1,72 +1,50 @@
-<template>
-  <s-col
-    :span="width"
-    :offset="offset"
-    :push="push"
-    :pull="pull"
-    :style="colStyle"
-    :xs="xs"
-    :sm="sm"
-    :md="md"
-    :lg="lg"
-  >
-    <slot />
-  </s-col>
-</template>
-
 <script>
-import Grid from 'simple-xgrid'
-
 export default {
   name: 'WColumn',
-  components: {
-    SCol: Grid.Col
-  },
   props: {
-    width: {
-      type: Number,
-      default: 0
-    },
     offset: {
       type: Number,
       default: 0
     },
-    push: {
+    width: {
       type: Number,
-      default: 0
-    },
-    pull: {
-      type: Number,
-      default: 0
-    },
-    xs: {
-      type: [Number, Object],
-      default: () => ({})
-    },
-    sm: {
-      type: [Number, Object],
-      default: () => ({})
-    },
-    md: {
-      type: [Number, Object],
-      default: () => ({})
-    },
-    lg: {
-      type: [Number, Object],
-      default: () => ({})
+      default: 1
     }
   },
   computed: {
-    colStyle () {
-      let colStyle =
-        this.$parent.gutter !== 0
-          ? {
-            'padding-left': `${this.$parent.gutter / 2}px`,
-            'padding-right': `${this.$parent.gutter / 2}px`
-          }
-          : {}
-      return colStyle
+    style () {
+      const columns = this.$parent.$props.columns
+      const gutter = this.$parent.$props.gutter
+
+      return {
+        '--gutter': `${gutter / 2}px`,
+        '--widthA': `calc(100% / ${columns} * ${this.width}`,
+        '--widthB': `calc(var(--widthA) - ${gutter}px)`,
+        '--marginLeftA': `calc(100% / ${columns} * ${this.offset})`,
+        '--marginLeftB': `calc(var(--widthA) + ${gutter / 2}px)`,
+        '--margin-left': this.offset ? 'var(--marginLeftB)' : `${gutter / 2}px`
+      }
     }
   }
 }
 </script>
+
+<template>
+  <div
+    class="w-column"
+    :style="style"
+    :offset="offset"
+    :width="width"
+  >
+    <slot />
+  </div>
+</template>
+
+<style scoped>
+.w-column {
+  box-sizing: border-box;
+  flex: 0 0 var(--widthB);
+  margin: 0 var(--gutter);
+  margin-left: var(--margin-left)
+}
+</style>
