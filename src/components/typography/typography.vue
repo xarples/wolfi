@@ -1,5 +1,7 @@
 <template>
   <p
+    :align="align"
+    :color="color"
     :variant="variant"
     :gutter="gutter"
     :style="style"
@@ -12,6 +14,15 @@
 export default {
   name: 'Typography',
   props: {
+    align: {
+      type: String,
+      default: 'left',
+      validator: val => ['left', 'center', 'right'].includes(val)
+    },
+    color: {
+      type: String,
+      default: 'black'
+    },
     gutter: {
       type: Boolean,
       default: false
@@ -40,12 +51,14 @@ export default {
   computed: {
     style () {
       return {
-        'font-family': this.$wolfiTheme.fonts.family,
-        'font-weight': this.$wolfiTheme.fonts.variant[this.variant].weight,
-        'font-size': this.$wolfiTheme.fonts.variant[this.variant].size,
-        'letter-spacing': this.$wolfiTheme.fonts.variant[this.variant].letterSpacing,
-        'margin-bottom': this.gutter ? '0.35em' : 0,
-        'margin-top': 0
+        color: this.$wolfiTheme.colors[this.color],
+        fontFamily: this.$wolfiTheme.fonts.family,
+        fontWeight: this.$wolfiTheme.fonts.variant[this.variant].weight,
+        fontSize: this.$wolfiTheme.fonts.variant[this.variant].size,
+        letterSpacing: this.$wolfiTheme.fonts.variant[this.variant].letterSpacing,
+        marginBottom: this.gutter ? '0.35em' : 0,
+        marginTop: 0,
+        textAlign: this.align
       }
     }
   }
