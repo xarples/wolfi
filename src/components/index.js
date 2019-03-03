@@ -1,4 +1,5 @@
 
+export { default as WAlign } from './align/align.vue'
 export { default as WAvatar } from './avatar/avatar.vue'
 export { default as WButton } from './button/button.vue'
 export { default as WContainer } from './container/container.vue'
