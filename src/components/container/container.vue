@@ -1,9 +1,9 @@
 <template>
-  <section :style="container">
+  <div :style="container">
     <div :style="containerChild">
       <slot />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
