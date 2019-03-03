@@ -27,7 +27,7 @@ To run that demo on your own computer:
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://unpkg.com/wolfi@0.8.0/dist/wolfi.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/xarples@wolfi@0.11.1/dist/wolfi.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
@@ -35,7 +35,7 @@ To run that demo on your own computer:
     <w-button>Click me</w-button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/wolfi@0.8.0/dist/wolfi.min.js"></script>
+  <script src="https://unpkg.com/xarples@wolfi@0.11.1/dist/wolfi.min.js"></script>
   <script>
     new Vue({
       el: '#app'
