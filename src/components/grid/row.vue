@@ -10,6 +10,10 @@ export default {
       type: Number,
       default: 0
     },
+    height: {
+      type: [String, Number],
+      default: 'inherit'
+    },
     verticalAlign: {
       type: String,
       default: 'top',
@@ -28,9 +32,10 @@ export default {
     },
     style () {
       return {
+        alignItems: this.align,
         display: 'flex',
         flexWrap: 'wrap',
-        alignItems: this.align
+        height: `${this.height}${typeof this.height !== 'string' && 'px'}`
       }
     }
   }
@@ -42,6 +47,7 @@ export default {
     :style="style"
     :columns="columns"
     :gutter="gutter"
+    :height="height"
     :verticalAlign="verticalAlign"
   >
     <slot />
