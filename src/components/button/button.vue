@@ -70,9 +70,6 @@ export default {
     style () {
       const { components } = this.$wolfiTheme
       return {
-        '&:hover': {
-          color: 'red'
-        },
         height: components.button.sizes[this.size],
         paddingLeft: this.icon ? '12px' : '16px',
         paddingRight: '16px',

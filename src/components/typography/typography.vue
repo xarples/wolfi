@@ -21,7 +21,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'black'
+      default: ''
     },
     gutter: {
       type: Boolean,
@@ -51,7 +51,7 @@ export default {
   computed: {
     style () {
       return {
-        color: this.$wolfiTheme.colors[this.color],
+        color: this.color ? this.$wolfiTheme.colors[this.color] : null,
         fontFamily: this.$wolfiTheme.fonts.family,
         fontWeight: this.$wolfiTheme.fonts.variant[this.variant].weight,
         fontSize: this.$wolfiTheme.fonts.variant[this.variant].size,
