@@ -24,8 +24,8 @@ export default {
       default: false
     },
     height: {
-      type: String,
-      default: '56px'
+      type: [String, Number],
+      default: 56
     },
     variant: {
       type: String,
@@ -54,8 +54,9 @@ export default {
     style () {
       return {
         'border-color': this.focus ? this.$wolfiTheme.colors.primary : 'silver',
+        boxSizing: 'border-box',
         width: this.fullWidth ? '100%' : 'inherit',
-        height: this.height,
+        height: `${this.height}${typeof this.height !== 'string' && 'px'}`,
         ...this[this.variant]
       }
     }
