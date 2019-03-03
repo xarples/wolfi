@@ -39,6 +39,7 @@ export default {
     style () {
       return {
         color: this.$wolfiTheme.colors[this.color],
+        fontFamily: this.$wolfiTheme.fonts.family,
         fontWeight: this.weight
       }
     }

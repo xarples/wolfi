@@ -1,6 +1,6 @@
 <template>
   <p
-    :align="align"
+    :textAlign="textAlign"
     :color="color"
     :variant="variant"
     :gutter="gutter"
@@ -14,7 +14,7 @@
 export default {
   name: 'Typography',
   props: {
-    align: {
+    textAlign: {
       type: String,
       default: 'left',
       validator: val => ['left', 'center', 'right'].includes(val)
@@ -58,7 +58,7 @@ export default {
         letterSpacing: this.$wolfiTheme.fonts.variant[this.variant].letterSpacing,
         marginBottom: this.gutter ? '0.35em' : 0,
         marginTop: 0,
-        textAlign: this.align
+        textAlign: this.textAlign
       }
     }
   }
