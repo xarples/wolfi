@@ -1,6 +1,7 @@
 // Import vue components
 import * as components from './components/index'
 import theme from './plugins/theme'
+import opacityColor from './plugins/opacityColor'
 
 // install function executed by Vue.use()
 function install (Vue, options) {
@@ -8,6 +9,7 @@ function install (Vue, options) {
   install.installed = true
 
   Vue.use(theme, options)
+  Vue.use(opacityColor)
 
   Object.keys(components).forEach((componentName) => {
     Vue.component(componentName, components[componentName])

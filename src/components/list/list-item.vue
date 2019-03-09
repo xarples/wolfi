@@ -15,7 +15,8 @@ export default {
       const listLines = this.$parent.lines
 
       return {
-        minHeight: this.$wolfiTheme.components.list.sizes[listLines].height
+        minHeight: this.$wolfiTheme.components.list.sizes[listLines].height,
+        '--hover-color': this.$opacityColor(this.$wolfiTheme.colors.primary, 0.07)
       }
     }
   }
@@ -30,7 +31,7 @@ export default {
   }
 
   .wolfi-list-item:hover {
-    background-color: #eeeeee6b;
+    background-color: var(--hover-color);
   }
 
 </style>

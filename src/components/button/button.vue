@@ -51,7 +51,8 @@ export default {
       return {
         border: `1px solid ${colors[this.color]}`,
         color: colors[this.color],
-        paddingLeft: '16px'
+        paddingLeft: '16px',
+        '--hover-color': this.$opacityColor(this.$wolfiTheme.colors[this.color], 0.07)
       }
     },
     text () {
@@ -59,7 +60,8 @@ export default {
 
       return {
         color: colors[this.color],
-        paddingLeft: '16px'
+        paddingLeft: '16px',
+        '--hover-color': this.$opacityColor(this.$wolfiTheme.colors[this.color], 0.07)
       }
     },
     iconColor () {
@@ -139,11 +141,11 @@ export default {
 }
 
 .outline:hover {
-  background-color: rgba(0, 0, 0, .04);
+  background-color: var(--hover-color);
 }
 
 .text:hover {
-  background-color: rgba(0, 0, 0, .08);
+  background-color: var(--hover-color);
 }
 
 .icon-container {
