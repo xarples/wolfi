@@ -52,6 +52,7 @@ export default {
       default: '',
       validator: val =>
         [
+          '',
           100,
           300,
           400,
