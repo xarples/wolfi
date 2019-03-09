@@ -8,7 +8,7 @@ stories.addDecorator(withKnobs)
 stories.addDecorator(VueInfoAddon)
 
 stories
-  .add('default', () => ({
+  .add('single line', () => ({
     template: `
       <w-list>
         <w-list-item>
@@ -26,6 +26,30 @@ stories
   .add('two lines', () => ({
     template: `
       <w-list :lines="2">
+        <w-list-item>
+          <w-typography>
+            <w-typography gutter>Line item</w-typography>
+            <w-typography variant="body2">Line item</w-typography>
+          </w-typography>
+        </w-list-item>
+        <w-list-item>
+          <w-typography>
+            <w-typography gutter>Line item</w-typography>
+            <w-typography variant="body2">Line item</w-typography>
+          </w-typography>
+        </w-list-item>
+        <w-list-item>
+          <w-typography>
+            <w-typography gutter>Line item</w-typography>
+            <w-typography variant="body2">Line item</w-typography>
+          </w-typography>
+        </w-list-item>
+      </w-list>
+    `
+  }))
+  .add('three lines', () => ({
+    template: `
+      <w-list :lines="3">
         <w-list-item>
           <w-typography>
             <w-typography gutter>Line item</w-typography>
