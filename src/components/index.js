@@ -1,4 +1,3 @@
-
 export { default as WAlign } from './align/align.vue'
 export { default as WAvatar } from './avatar/avatar.vue'
 export { default as WButton } from './button/button.vue'
@@ -12,6 +11,7 @@ export { default as WDrawerHeader } from './drawer/drawer-header.vue'
 export { default as WDrawerContent } from './drawer/drawer-content.vue'
 export { default as WDivider } from './divider/divider.vue'
 export { default as WDialog } from './dialog/dialog.vue'
+export { default as WElevation } from './elevation/elevation.vue'
 export { default as WIcon } from './icon/icon.vue'
 export { default as WInput } from './inputs/input.vue'
 export { default as WList } from './list/list.vue'

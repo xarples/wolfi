@@ -16,7 +16,7 @@
           :color="iconColor"
         />
       </w-column>
-      <w-column>
+      <w-column :width="8">
         <w-row>
           <w-typography
             variant="body1"
@@ -89,7 +89,6 @@ export default {
 
 <style scoped>
 .wolfi-stepper-item {
-  display: flex;
   flex: 1;
   padding: 10px 15px;
   transition: all ease .2s;
