@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WTypography from './typography.vue'
 
 const stories = storiesOf('Typography', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WTypography },
     template: `
       <div>
         <w-typography variant="headline1">Test</w-typography>
@@ -26,4 +26,6 @@ stories
         <w-typography variant="overline">Test</w-typography>
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

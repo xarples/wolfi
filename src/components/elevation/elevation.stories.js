@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WElevation from './elevation.vue'
 
 const stories = storiesOf('Elevation', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('card', () => ({
+    components: { WElevation },
     template: `
       <w-container :max-width="500">
         <w-elevation elevation="1dp" raised="8dp">
@@ -26,4 +26,6 @@ stories
         </w-elevation>
       <w-container>
     `
-  }))
+  }), {
+    info: {}
+  })

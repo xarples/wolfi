@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WStrong from './strong.vue'
 
 const stories = storiesOf('Strong', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WStrong },
     template: `
       <w-typography>
         <w-strong>Lorem ipsum dolor sit amet</w-strong>, consectetur adipiscing elit, sed do eiusmod tempor
@@ -18,4 +18,6 @@ stories
         fugiat nulla pariatur.
       </w-typography>
     `
-  }))
+  }), {
+    info: {}
+  })

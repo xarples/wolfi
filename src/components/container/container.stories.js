@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WContainer from './container.vue'
 
 const stories = storiesOf('Container', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WContainer },
     template: `
       <w-container :max-width="1280" :padding-lateral="32">
         <w-typography align="center" variant="headline5">
@@ -32,4 +32,6 @@ stories
         </w-typography>
       </w-container>
     `
-  }))
+  }), {
+    info: {}
+  })

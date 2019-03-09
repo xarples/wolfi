@@ -75,7 +75,7 @@ export default {
         height: components.button.sizes[this.size],
         paddingLeft: this.icon ? '12px' : '16px',
         paddingRight: '16px',
-        width: this.fullWidth && '100%',
+        width: this.fullWidth ? '100%' : null,
         ...this[this.variant]
       }
     }

@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WAlign from './align.vue'
 
 const stories = storiesOf('Align', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WAlign },
     template: `
     <w-container :max-width="1280">
       <w-row>
@@ -21,4 +21,6 @@ stories
       </w-row>
     </w-container>
     `
-  }))
+  }), {
+    info: {}
+  })

@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WTabs from './tabs.vue'
+import WTab from './tab.vue'
 
 const stories = storiesOf('Tabs', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
@@ -19,6 +19,7 @@ stories
         this.current = tabIndex
       }
     },
+    components: { WTabs, WTab },
     template: `
       <div>
         <w-tabs fullWidth>
@@ -28,4 +29,6 @@ stories
         </w-tabs>
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

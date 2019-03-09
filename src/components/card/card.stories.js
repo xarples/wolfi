@@ -1,14 +1,16 @@
 
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WCard from './card.vue'
+import WCardImage from './card-image.vue'
+import WCardContent from './card-content.vue'
 
 const stories = storiesOf('Card', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories.add('default', () => ({
+  components: { WCard, WCardImage, WCardContent },
   template: `
     <w-container :max-width="500">
       <w-elevation elevation="1dp" raised="1dp">
@@ -26,4 +28,6 @@ stories.add('default', () => ({
       </w-elevation>
     </w-container>
   `
-}))
+}), {
+  info: {}
+})

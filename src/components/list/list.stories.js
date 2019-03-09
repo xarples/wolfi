@@ -1,14 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WList from './list.vue'
+import WListItem from './list-item.vue'
 
 const stories = storiesOf('List', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('single line', () => ({
+    components: { WList, WListItem },
     template: `
       <w-list>
         <w-list-item>
@@ -22,8 +23,11 @@ stories
         </w-list-item>
       </w-list>
     `
-  }))
+  }), {
+    info: {}
+  })
   .add('two lines', () => ({
+    components: { WList, WListItem },
     template: `
       <w-list :lines="2">
         <w-list-item>
@@ -46,8 +50,11 @@ stories
         </w-list-item>
       </w-list>
     `
-  }))
+  }), {
+    info: {}
+  })
   .add('three lines', () => ({
+    components: { WList, WListItem },
     template: `
       <w-list :lines="3">
         <w-list-item>
@@ -70,4 +77,6 @@ stories
         </w-list-item>
       </w-list>
     `
-  }))
+  }), {
+    info: {}
+  })

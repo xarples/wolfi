@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, select, text, number, boolean } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
 import { action } from '@storybook/addon-actions'
+import WAvatar from './avatar.vue'
 
 const stories = storiesOf('Avatar', module)
 
@@ -22,7 +22,6 @@ const colorOptions = {
 const colorDefaultValue = ''
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
@@ -61,6 +60,7 @@ stories
         default: text('Image src', 'https://picsum.photos/200/300/?random')
       }
     },
+    components: { WAvatar },
     template: `
       <div>
         <w-avatar
@@ -74,4 +74,6 @@ stories
         />
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

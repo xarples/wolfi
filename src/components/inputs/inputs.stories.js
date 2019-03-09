@@ -1,31 +1,35 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WInput from './input.vue'
+import WTextarea from './textarea.vue'
+import WSwitch from './switch.vue'
 
 const stories = storiesOf('Forms', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('input', () => ({
+    components: { WInput },
     template: `
-      <div>
-        <w-input placeholder="Fist Name" />
-      </div>
+      <w-input placeholder="Fist Name" />
     `
-  }))
+  }), {
+    info: {}
+  })
   .add('textarea', () => ({
+    components: { WTextarea },
     template: `
-      <div>
-        <w-textarea />
-      </div>
+      <w-textarea />
     `
-  }))
+  }), {
+    info: {}
+  })
   .add('switch', () => ({
+    components: { WSwitch },
     template: `
-      <div>
-        <w-switch color="primary" />
-      </div>
+      <w-switch color="primary" />
     `
-  }))
+  }), {
+    info: {}
+  })

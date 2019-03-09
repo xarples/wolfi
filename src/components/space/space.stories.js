@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WSpace from './space.vue'
 
 const stories = storiesOf('Space', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WSpace },
     template: `
       <div>
         <w-typography align="center" variant="headline5">
@@ -32,4 +32,6 @@ stories
         </w-typography>
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

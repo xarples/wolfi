@@ -1,14 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WRow from './row.vue'
+import WColumn from './column.vue'
 
 const stories = storiesOf('Grid', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WRow, WColumn },
     template: `
       <w-container :max-width="1280">
         <w-row>
@@ -17,4 +18,6 @@ stories
         </w-row>
       </w-container>
     `
-  }))
+  }), {
+    info: {}
+  })

@@ -1,11 +1,10 @@
 import { storiesOf } from '@storybook/vue'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WDivider from './divider.vue'
 
 const stories = storiesOf('Divider', module)
 
-stories.addDecorator(VueInfoAddon)
-
 stories.add('default', () => ({
+  components: { WDivider },
   template: `
       <w-list :lines="2">
         <w-list-item>
@@ -30,4 +29,6 @@ stories.add('default', () => ({
         </w-list-item>
       </w-list>
     `
-}))
+}), {
+  info: {}
+})

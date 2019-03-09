@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WStepper from './stepper.vue'
+import WStepperItem from './stepper-item.vue'
 
 const stories = storiesOf('Stepper', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
@@ -22,6 +22,7 @@ stories
         this.currentStep += 1
       }
     },
+    components: { WStepper, WStepperItem },
     template: `
       <div>
         <w-stepper :currentStep="currentStep">
@@ -32,4 +33,6 @@ stories
         <w-button @click="handleClick" style="margin-top: 1em">{{ currentStep < 3 ? 'Next' : 'Ok' }}</w-button>
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

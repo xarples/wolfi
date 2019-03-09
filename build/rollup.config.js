@@ -23,6 +23,7 @@ const config = {
     css({
       output: './dist/wolfi.min.css'
     }),
+    commonjs(),
     vue({
       css: false,
       compileTemplate: true,
@@ -54,10 +55,9 @@ if (argv.format !== 'iife') {
 // Only minify browser (iife) version
 if (argv.format === 'iife') {
   config.plugins = [
-    ...config.plugins,
     resolve(),
-    commonjs(),
-    uglify()
+    uglify(),
+    ...config.plugins
   ]
 }
 

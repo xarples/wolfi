@@ -1,14 +1,16 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WDrawer from './drawer.vue'
+import WDrawerHeader from './drawer-header.vue'
+import WDrawerContent from './drawer-content.vue'
 
 const stories = storiesOf('Drawer', module)
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
+    components: { WDrawer, WDrawerHeader, WDrawerContent },
     template: `
       <w-drawer>
         <w-drawer-header>
@@ -39,4 +41,6 @@ stories
         </w-drawer-content>
       </w-drawer>
     `
-  }))
+  }), {
+    info: {}
+  })

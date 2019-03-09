@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs'
-import VueInfoAddon from 'storybook-addon-vue-info'
 import { action } from '@storybook/addon-actions'
+import WButton from './button.vue'
 
 const stories = storiesOf('Button', module)
 
@@ -29,7 +29,6 @@ const variantOptions = {
 const variantDefaultValue = 'contained'
 
 stories.addDecorator(withKnobs)
-stories.addDecorator(VueInfoAddon)
 
 stories
   .add('default', () => ({
@@ -60,6 +59,7 @@ stories
         default: boolean('Full width', false)
       }
     },
+    components: { WButton },
     template: `
       <div>
         <w-button
@@ -75,4 +75,6 @@ stories
         </w-button>
       </div>
     `
-  }))
+  }), {
+    info: {}
+  })

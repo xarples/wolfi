@@ -1,9 +1,7 @@
 import { storiesOf } from '@storybook/vue'
-import VueInfoAddon from 'storybook-addon-vue-info'
+import WDialog from './dialog.vue'
 
 const stories = storiesOf('Dialog', module)
-
-stories.addDecorator(VueInfoAddon)
 
 stories.add('default', () => ({
   methods: {
@@ -11,6 +9,7 @@ stories.add('default', () => ({
       console.log(event)
     }
   },
+  components: { WDialog },
   template: `
       <w-dialog
         title="Get this party started?"
@@ -22,4 +21,6 @@ stories.add('default', () => ({
       >
       </w-dialog>
     `
-}))
+}), {
+  info: {}
+})
