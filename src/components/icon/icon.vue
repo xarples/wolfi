@@ -33,7 +33,8 @@ export default {
   computed: {
     style () {
       return {
-        color: this.$wolfiTheme.colors[this.color]
+        color: this.$wolfiTheme.colors[this.color],
+        display: 'flex'
       }
     }
   }
