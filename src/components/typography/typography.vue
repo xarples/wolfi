@@ -46,6 +46,24 @@ export default {
           'caption',
           'overline'
         ].includes(val)
+    },
+    weight: {
+      type: [String, Number],
+      default: '',
+      validator: val =>
+        [
+          100,
+          300,
+          400,
+          500,
+          700,
+          'thin',
+          'light',
+          'normal',
+          'regular',
+          'medium',
+          'bold'
+        ].includes(val)
     }
   },
   computed: {
@@ -53,7 +71,7 @@ export default {
       return {
         color: this.color ? this.$wolfiTheme.colors[this.color] : null,
         fontFamily: this.$wolfiTheme.fonts.family,
-        fontWeight: this.$wolfiTheme.fonts.variant[this.variant].weight,
+        fontWeight: this.weight ? this.weight : this.$wolfiTheme.fonts.variant[this.variant].weight,
         fontSize: this.$wolfiTheme.fonts.variant[this.variant].size,
         letterSpacing: this.$wolfiTheme.fonts.variant[this.variant].letterSpacing,
         marginBottom: this.gutter ? '0.35em' : 0,
