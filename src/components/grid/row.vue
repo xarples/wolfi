@@ -35,7 +35,8 @@ export default {
         alignItems: this.align,
         display: 'flex',
         flexWrap: 'wrap',
-        height: `${this.height}${typeof this.height !== 'string' && 'px'}`
+        height: `${this.height}${typeof this.height !== 'string' && 'px'}`,
+        width: '100%'
       }
     }
   }
