@@ -28,7 +28,7 @@ export default {
         around: 'space-around'
       }
 
-      return alignments[this.verticalAlign]
+      return alignments[this.horizontalAlign]
     },
     _verticalAlign () {
       const alignments = {
