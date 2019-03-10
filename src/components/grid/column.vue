@@ -9,7 +9,8 @@ export default {
     verticalAlign: {
       type: String,
       default: 'center',
-      validator: val => ['top', 'center', 'bottom', 'between', 'around'].includes(val)
+      validator: val =>
+        ['top', 'center', 'bottom', 'between', 'around'].includes(val)
     },
     width: {
       type: Number,
@@ -30,6 +31,22 @@ export default {
     xs: {
       type: Number,
       default: 0
+    },
+    offsetLg: {
+      type: Number,
+      default: 0
+    },
+    offsetMd: {
+      type: Number,
+      default: 0
+    },
+    offsetSm: {
+      type: Number,
+      default: 0
+    },
+    offsetXs: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
@@ -48,16 +65,22 @@ export default {
       const columns = this.$parent.$props.columns
       const gutter = this.$parent.$props.gutter
       const width = this[this.$mq] ? this[this.$mq] : this.width
+      const offset = this[`offset${this.upperFirstLetter(this.$mq)}`] ? this[this.$mq] : this.offset
 
       return {
         '--gutter': `${gutter / 2}px`,
-        '--marginLeftA': `calc(100% / ${columns} * ${this.offset})`,
+        '--marginLeftA': `calc(100% / ${columns} * ${offset})`,
         '--marginLeftB': `calc(var(--marginLeftA) + ${gutter / 2}px)`,
-        '--margin-left': this.offset ? 'var(--marginLeftB)' : `${gutter / 2}px`,
+        '--offset': offset ? 'var(--marginLeftB)' : `${gutter / 2}px`,
         '--widthA': `calc(100% / ${columns} * ${width}`,
         '--vertical-align': this._verticalAlign,
         '--width': `calc(var(--widthA) - ${gutter}px)`
       }
+    }
+  },
+  methods: {
+    upperFirstLetter (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   }
 }
@@ -84,7 +107,6 @@ export default {
   box-sizing: border-box;
   flex: 0 0 var(--width);
   margin: 0 var(--gutter);
-  margin-left: var(--margin-left)
+  margin-left: var(--offset);
 }
-
 </style>
