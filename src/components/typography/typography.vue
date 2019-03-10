@@ -93,7 +93,7 @@ export default {
         letterSpacing: this.$wolfiTheme.fonts.variant[variant].letterSpacing,
         marginBottom: this.gutter ? '0.35em' : 0,
         marginTop: 0,
-        textAlign: this.textAligns
+        textAlign: this.textAlign
       }
     }
   },

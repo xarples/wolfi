@@ -56,7 +56,7 @@ export default {
         : this.width
       const height = this[`height${this.upperFirstLetter(this.$mq)}`]
         ? this[`height${this.upperFirstLetter(this.$mq)}`]
-        : this.width
+        : this.height
 
       return {
         display: 'inline-block',
