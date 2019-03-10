@@ -56,6 +56,7 @@ export default {
         'border-color': this.focus ? this.$wolfiTheme.colors.primary : 'silver',
         boxSizing: 'border-box',
         width: this.fullWidth ? '100%' : 'inherit',
+        minWidth: this.fullWidth ? null : '280px',
         height: `${this.height}${typeof this.height !== 'string' && 'px'}`,
         ...this[this.variant]
       }
@@ -70,7 +71,6 @@ export default {
   border: none;
   font-size: 16px;
   font-family: Roboto;
-  min-width: 280px;
   padding: 8px 0px;
 }
 .wolfi-input:focus {
