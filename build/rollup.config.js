@@ -41,12 +41,14 @@ const config = {
 if (argv.format !== 'iife') {
   config.external = [
     'color',
+    'vue-mq',
     'vue-avatar',
     'vue-awesome/icons',
     'vue-awesome/components/Icon.vue'
   ]
   config.output.globals = {
     'color': 'Color',
+    'vue-mq': 'VueMq',
     'vue-avatar': 'Avatar',
     'vue-awesome/components/Icon.vue': 'VIcon'
   }

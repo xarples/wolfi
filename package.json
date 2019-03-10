@@ -38,7 +38,8 @@
   "dependencies": {
     "color": "^3.1.0",
     "vue-avatar": "^2.1.7",
-    "vue-awesome": "^3.4.0"
+    "vue-awesome": "^3.4.0",
+    "vue-mq": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

@@ -47,27 +47,16 @@ export default {
     style () {
       const columns = this.$parent.$props.columns
       const gutter = this.$parent.$props.gutter
-      const xs = this.xs ? this.xs : this.width
-      const sm = this.sm ? this.sm : this.width
-      const md = this.md ? this.md : this.width
-      const lg = this.lg ? this.lg : this.width
+      const width = this[this.$mq] ? this[this.$mq] : this.width
 
       return {
         '--gutter': `${gutter / 2}px`,
         '--marginLeftA': `calc(100% / ${columns} * ${this.offset})`,
         '--marginLeftB': `calc(var(--marginLeftA) + ${gutter / 2}px)`,
         '--margin-left': this.offset ? 'var(--marginLeftB)' : `${gutter / 2}px`,
-        '--widthA': `calc(100% / ${columns} * ${this.width}`,
+        '--widthA': `calc(100% / ${columns} * ${width}`,
         '--vertical-align': this._verticalAlign,
-        '--widthB': `calc(var(--widthA) - ${gutter}px)`,
-        '--width-xs-pre': `calc(100% / ${columns} * ${xs}`,
-        '--width-xs': `calc(var(--width-xs-pre) - ${gutter}px)`,
-        '--width-sm-pre': `calc(100% / ${columns} * ${sm}`,
-        '--width-sm': `calc(var(--idth-sm-pre) - ${gutter}px)`,
-        '--width-md-pre': `calc(100% / ${columns} * ${md}`,
-        '--width-md': `calc(var(--width-md-pre) - ${gutter}px)`,
-        '--width-lg-pre': `calc(100% / ${columns} * ${lg}`,
-        '--width-lg': `calc(var(--width-lg-pre) - ${gutter}px)`
+        '--width': `calc(var(--widthA) - ${gutter}px)`
       }
     }
   }
@@ -93,26 +82,9 @@ export default {
 .w-column {
   align-self: var(--vertical-align);
   box-sizing: border-box;
-  flex: 0 0 var(--width-xs);
+  flex: 0 0 var(--width);
   margin: 0 var(--gutter);
   margin-left: var(--margin-left)
 }
 
-@media only screen and (min-width: 768px) {
-  .w-column {
-    flex: 0 0 var(--width-sm);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .w-column {
-    flex: 0 0 var(--width-md);
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .w-column {
-    flex: 0 0 var(--width-lg);
-  }
-}
 </style>

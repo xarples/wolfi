@@ -1,4 +1,5 @@
 // Import vue components
+import VueMq from 'vue-mq'
 import * as components from './components/index'
 import theme from './plugins/theme'
 import opacityColor from './plugins/opacityColor'
@@ -10,6 +11,15 @@ function install (Vue, options) {
 
   Vue.use(theme, options)
   Vue.use(opacityColor)
+  Vue.use(VueMq, {
+    breakpoints: { // default breakpoints - customize this
+      xs: 767,
+      sm: 768,
+      md: 992,
+      lg: 1230
+    },
+    defaultBreakpoint: 'xs' // customize this for SSR
+  })
 
   Object.keys(components).forEach((componentName) => {
     Vue.component(componentName, components[componentName])
