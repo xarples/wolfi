@@ -1,7 +1,12 @@
 <template>
   <p
+    class="text"
     :textAlign="textAlign"
     :color="color"
+    :variantXs="variantXs"
+    :variantSm="variantSm"
+    :variantMd="variantMd"
+    :variantLg="variantLg"
     :variant="variant"
     :gutter="gutter"
     :style="style"
@@ -26,6 +31,22 @@ export default {
     gutter: {
       type: Boolean,
       default: false
+    },
+    variantXs: {
+      type: String,
+      default: ''
+    },
+    variantSm: {
+      type: String,
+      default: ''
+    },
+    variantMd: {
+      type: String,
+      default: ''
+    },
+    variantLg: {
+      type: String,
+      default: ''
     },
     variant: {
       type: String,
@@ -69,12 +90,23 @@ export default {
   },
   computed: {
     style () {
+      let vars = {}
+      const variants = ['variantXs', 'variantSm', 'variantMd', 'variantLg']
+
+      variants.forEach(size => {
+        const variant = this[size] || this.variant
+
+        vars = Object.assign({}, vars, {
+          [`--${size}-fontFamily`]: this.$wolfiTheme.fonts.family,
+          [`--${size}-fontWeight`]: this.weight ? this.weight : this.$wolfiTheme.fonts.variant[variant].weight,
+          [`--${size}-fontSize`]: this.$wolfiTheme.fonts.variant[variant].size,
+          [`--${size}-letterSpacing`]: this.$wolfiTheme.fonts.variant[variant].letterSpacing
+        })
+      })
+
       return {
+        ...vars,
         color: this.color ? this.$wolfiTheme.colors[this.color] : null,
-        fontFamily: this.$wolfiTheme.fonts.family,
-        fontWeight: this.weight ? this.weight : this.$wolfiTheme.fonts.variant[this.variant].weight,
-        fontSize: this.$wolfiTheme.fonts.variant[this.variant].size,
-        letterSpacing: this.$wolfiTheme.fonts.variant[this.variant].letterSpacing,
         marginBottom: this.gutter ? '0.35em' : 0,
         marginTop: 0,
         textAlign: this.textAlign
@@ -86,4 +118,40 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+</style>
+
+<style scoped>
+.text {
+  font-family: var(--variantXs-fontFamily);
+  font-weight: var(--variantXs-fontWeight);
+  font-size: var(--variantXs-fontSize);
+  letter-spacing: var(--variantXs-letterSpacing);
+}
+
+@media only screen and (min-width: 768px) {
+  .text {
+    font-family: var(--variantSm-fontFamily);
+    font-weight: var(--variantSm-fontWeight);
+    font-size: var(--variantSm-fontSize);
+    letter-spacing: var(--variantSm-letterSpacing);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .text {
+    font-family: var(--variantMd-fontFamily);
+    font-weight: var(--variantMd-fontWeight);
+    font-size: var(--variantMd-fontSize);
+    letter-spacing: var(--variantMd-letterSpacing);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .text {
+    font-family: var(--variantLg-fontFamily);
+    font-weight: var(--variantLg-fontWeight);
+    font-size: var(--variantLg-fontSize);
+    letter-spacing: var(--variantLg-letterSpacing);
+  }
+}
 </style>

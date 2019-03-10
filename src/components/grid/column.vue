@@ -77,6 +77,10 @@ export default {
 <template>
   <div
     class="w-column"
+    :xs="xs"
+    :sm="sm"
+    :md="md"
+    :lg="lg"
     :style="style"
     :offset="offset"
     :width="width"
