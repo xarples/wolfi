@@ -65,7 +65,7 @@ export default {
       const columns = this.$parent.$props.columns
       const gutter = this.$parent.$props.gutter
       const width = this[this.$mq] ? this[this.$mq] : this.width
-      const offset = this[`offset${this.upperFirstLetter(this.$mq)}`] ? this[this.$mq] : this.offset
+      const offset = this[`offset${this.upperFirstLetter(this.$mq)}`] ? this[`offset${this.upperFirstLetter(this.$mq)}`] : this.offset
 
       return {
         '--gutter': `${gutter / 2}px`,
@@ -89,13 +89,7 @@ export default {
 <template>
   <div
     class="w-column"
-    :xs="xs"
-    :sm="sm"
-    :md="md"
-    :lg="lg"
     :style="style"
-    :offset="offset"
-    :width="width"
   >
     <slot />
   </div>

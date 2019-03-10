@@ -13,7 +13,7 @@ stories
     template: `
       <w-container :max-width="1280">
         <w-row>
-          <w-column :offset="1" :width="4">2</w-column>
+          <w-column :offset-md="2" :offset-lg="2" :width="4">2</w-column>
           <w-column :width="4">3</w-column>
         </w-row>
       </w-container>

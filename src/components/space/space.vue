@@ -12,19 +12,62 @@ export default {
       type: [String, Number],
       default: 0
     },
-    /** if it is number the value will be in px */
+    heightLg: {
+      type: Number,
+      default: 0
+    },
+    heightMd: {
+      type: Number,
+      default: 0
+    },
+    heightSm: {
+      type: Number,
+      default: 0
+    },
+    heightXs: {
+      type: Number,
+      default: 0
+    },
     width: {
       type: [String, Number],
+      default: 0
+    },
+    widthLg: {
+      type: Number,
+      default: 0
+    },
+    widthMd: {
+      type: Number,
+      default: 0
+    },
+    widthSm: {
+      type: Number,
+      default: 0
+    },
+    widthXs: {
+      type: Number,
       default: 0
     }
   },
   computed: {
     style () {
+      const width = this[`width${this.upperFirstLetter(this.$mq)}`]
+        ? this[`width${this.upperFirstLetter(this.$mq)}`]
+        : this.width
+      const height = this[`height${this.upperFirstLetter(this.$mq)}`]
+        ? this[`height${this.upperFirstLetter(this.$mq)}`]
+        : this.width
+
       return {
         display: 'inline-block',
-        height: `${this.height}${typeof this.height !== 'string' && 'px'}`,
-        width: `${this.width}${typeof this.width !== 'string' && 'px'}`
+        height: `${height}${typeof height !== 'string' && 'px'}`,
+        width: `${width}${typeof width !== 'string' && 'px'}`
       }
+    }
+  },
+  methods: {
+    upperFirstLetter (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   }
 }
