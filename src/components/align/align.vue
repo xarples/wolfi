@@ -56,9 +56,6 @@ export default {
   <div
     class="align"
     :style="style"
-    :display="display"
-    :verticalAlign="verticalAlign"
-    :horizontalAlign="horizontalAlign"
   >
     <slot />
   </div>
