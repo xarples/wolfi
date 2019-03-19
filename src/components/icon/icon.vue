@@ -1,5 +1,8 @@
 <template>
-  <span :style="style">
+  <span
+    :style="style"
+    :color="color"
+  >
     <v-icon
       :name="name"
       :scale="scale"
