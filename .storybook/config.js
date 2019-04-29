@@ -5,9 +5,11 @@ import { withInfo } from 'storybook-addon-vue-info'
 
 import wolfi from '../src'
 
+console.log(wolfi)
+
 Vue.use(wolfi)
 
-const req = require.context('../src/components', true, /\.stories\.js$/)
+const req = require.context('../src/components', true, /\.stories\.ts$/)
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

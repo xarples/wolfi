@@ -1,6 +1,6 @@
 // Import vue components
 import VueMq from 'vue-mq'
-import * as components from './components/index'
+import * as components from './components'
 import theme from './plugins/theme'
 import opacityColor from './plugins/opacityColor'
 

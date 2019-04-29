@@ -7,11 +7,12 @@ import minimist from 'minimist'
 import css from 'rollup-plugin-css-only'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import typescript from 'rollup-plugin-typescript'
 
 const argv = minimist(process.argv.slice(2))
 
 const config = {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: {
     name: 'Wolfi',
     exports: 'named'
@@ -23,7 +24,8 @@ const config = {
     css({
       output: './dist/wolfi.min.css'
     }),
-    commonjs(),
+    typescript(),
+    commonjs({ extensions: ['.js', '.ts'] }),
     vue({
       css: false,
       compileTemplate: true,
