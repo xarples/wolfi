@@ -9,6 +9,8 @@ interface FontVariant {
 
 export interface WolfiTheme {
   colors?: {
+    white?: string,
+    black?: string,
     error?: string,
     primary?: string,
     primaryLight?: string,

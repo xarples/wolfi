@@ -2,10 +2,12 @@ import { WolfiTheme } from '../../types';
 
 const defaultTheme: WolfiTheme = {
   colors: {
+    white: '#FFFFFF',
+    black: '#000000',
     error: '#B00020',
     primary: '#2962FF',
-    primaryLight: '#E7E9FF',
-    primaryDark: '#0001C0',
+    primaryLight: '#96A4FE',
+    primaryDark: '#002FE3',
     secondary: '#F5F5F5',
     secondaryLight: '#FAFAFA',
     secondaryDark: '#212121',
