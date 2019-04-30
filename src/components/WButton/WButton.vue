@@ -1,5 +1,5 @@
 <script lang="ts">
-import color from 'color'
+import color from "color";
 import WText from "../WText";
 import { Color, Variant } from "./types";
 
@@ -27,10 +27,19 @@ export default {
     }
   },
   computed: {
+    classes(): any {
+      return [
+        'w-button',
+        `w-button--${this.variant}`,
+        `w-button--${this.variant}-${this.color}`,
+        this.disabled && `w-button--${this.variant}-disabled`
+      ]
+    },
     style(): object {
       const { colors = {}, elevations = {}, corner = {} } = this.$wolfi.theme;
 
       return {
+        "--disabled": color(colors.black).alpha(0.18),
         "--primary": color(colors.primary),
         "--primary-light": colors.primaryLight,
         "--primary-dark": colors.primaryDark,
@@ -43,10 +52,11 @@ export default {
         "--on-secondary": colors.onSecondary,
         "--on-secondary-light": colors.onSecondaryLight,
         "--on-secondary-dark": colors.onSecondaryDark,
+        "--on-disabled": color(colors.black).alpha(0.38),
 
         "--box-shadow": elevations["1dp"],
         "--box-shadow-disabled": elevations["0dp"],
-        "--box-shadow-hover": elevations["5dp"],
+        "--box-shadow-hover": elevations["6dp"],
         "--border-radius": corner.radius,
         "--display": this.fullWidth ? "flex" : "inline-flex"
       };
@@ -56,11 +66,7 @@ export default {
 </script>
 
 <template>
-  <div
-    :style="style"
-    :class="['w-button', variant, color, { disabled }]"
-    @click="$emit('click', $event)"
-  >
+  <div :style="style" :class="classes" @click="$emit('click', $event)">
     <w-text variant="button">
       <slot></slot>
     </w-text>
@@ -77,75 +83,78 @@ export default {
   justify-content: center;
   min-width: 64px;
   padding: 0 16px;
-  transition: all linear .2s;
+  transition: all linear 0.2s;
 }
 
-.disabled {
-  cursor: not-allowed;
-  box-shadow: var(--box-shadow-disabled);
-}
-
-.contained {
+.w-button--contained {
   box-shadow: var(--box-shadow);
 }
 
-.contained:hover:not(.disabled) {
+.w-button--contained:hover {
   box-shadow: var(--box-shadow-hover);
 }
 
-.contained.primary {
+.w-button--contained:active {
+  box-shadow: var(--box-shadow);
+}
+
+.w-button--contained-primary {
   background-color: var(--primary);
   color: var(--on-primary);
 }
 
-.contained.primary.disabled {
-  background-color: var(--primary-light);
+.w-button--contained-primary:active {
+  background-color: var(--primary-dark);
   color: var(--on-primary);
 }
 
-.contained.secondary {
+.w-button--contained-secondary {
   background-color: var(--secondary);
   color: var(--on-secondary);
 }
 
-.contained.secondary.disabled {
-  background-color: var(--secondary-light);
-  color: var(--on-secondary);
+.w-button--contained-disabled,
+.w-button--contained-disabled:active,
+.w-button--contained-disabled:hover {
+  background-color: var(--disabled);
+  box-shadow: var(--box-shadow-disabled);
+  color: var(--on-disabled);
+  cursor: not-allowed;
 }
 
-.text.primary {
+.w-button--text-primary {
   color: var(--primary);
 }
 
-.text.primary.disabled {
-  color: var(--primary);
+.w-button--text-secondary {
+  color: var(--on-secondary-light);
 }
 
-.text.secondary {
-  color: var(--secondary);
+.w-button--text-disabled,
+.w-button--text-disabled:active,
+.w-button--text-disabled:hover {
+  background-color: var(--disabled);
+  box-shadow: var(--box-shadow-disabled);
+  color: var(--on-disabled);
+  cursor: not-allowed;
 }
 
-.text.secondary.disabled {
-  color: var(--secondary);
-}
-
-.outlined.primary {
+.w-button--outlined-primary {
   border: 1px solid var(--primary);
   color: var(--primary);
 }
 
-.outlined.primary.disabled {
-  border: 1px solid var(--primary-light);
-  color: var(--primary-light);
-}
-
-.outlined.secondary {
+.w-button--outlined-secondary {
   border: 1px solid var(--secondary);
-  color: var(--secondary);
+  color: var(--on-secondary-light);
 }
 
-.outlined.secondary.disabled {
-  border: 1px solid var(--secondary-light);
-  color: var(--secondary-light);
+.w-button--outlined-disabled,
+.w-button--outlined-disabled:active,
+.w-button--outlined-disabled:hover {
+  border-color: var(--disabled);
+  color: var(--on-disabled);
+  cursor: not-allowed;
 }
+
 </style>
