@@ -48,16 +48,14 @@ stories
     },
     components: { WButton },
     template: `
-      <div>
-        <w-button
-          :color="color"
-          :disabled="disabled"
-          :variant="variant"
-          @click="handleClick"
-        >
-          ${text('Label', 'Click me')}
-        </w-button>
-      </div>
+      <w-button
+        :color="color"
+        :disabled="disabled"
+        :variant="variant"
+        @click="handleClick"
+      >
+        ${text('Label', 'Click me')}
+      </w-button>
     `,
   }),  {
     info: {},

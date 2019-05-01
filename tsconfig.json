@@ -66,5 +66,8 @@
     "**/*.spec.ts",
     "**/*.spec.js",
     "node_modules"
+  ],
+  "include": [
+    "./src/**/*"
   ]
 }
