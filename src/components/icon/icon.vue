@@ -1,45 +1,56 @@
-<template>
-  <span
-    :style="style"
-    :color="color"
-  >
-    <v-icon
-      :name="name"
-      :scale="scale"
-    />
-  </span>
-</template>
+<script lang="ts">
+import { defineComponent, computed } from "@vue/composition-api"
+import { Color } from "@/types"
+import { Size } from "@/components/icon/types"
 
-<script>
-import 'vue-awesome/icons'
-import VIcon from 'vue-awesome/components/Icon.vue'
-
-export default {
-  name: 'WIcon',
-  components: {
-    VIcon
-  },
+export default defineComponent({
   props: {
     name: {
-      type: String,
-      default: null
-    },
-    scale: {
-      type: [String, Number],
-      default: 1
+      type: String as () => string,
+      required: false
     },
     color: {
-      type: String,
-      default: 'white'
+      type: String as () => Color,
+      required: false,
+      default: "default" as Color
+    },
+    size: {
+      type: String as () => Size,
+      required: false,
+      default: "1x" as Size
     }
   },
-  computed: {
-    style () {
-      return {
-        color: this.$wolfiTheme.colors[this.color],
-        display: 'flex'
-      }
+  setup(props, context) {
+    const classes = computed(() => ({
+      icon: true,
+      fa: true,
+      [`fa-${props.name}`]: true,
+      [`fa-${props.size}`]: true
+    }))
+
+    const styles = computed(() => ({
+      "--current-color": context.root.$wolfi.colors[props.color]
+    }))
+
+    return {
+      classes,
+      styles
     }
   }
-}
+})
 </script>
+
+<template>
+  <i :style="[baseStyles, styles]" :class="classes">
+    <slot />
+  </i>
+</template>
+
+<style scoped>
+.icon {
+  align-items: center;
+  color: var(--current-color);
+  display: flex;
+  justify-self: center;
+}
+</style>

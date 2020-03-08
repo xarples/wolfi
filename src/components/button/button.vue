@@ -1,157 +1,203 @@
-<script>
-import WIcon from '../icon/icon.vue'
-import WTypography from '../typography/typography.vue'
+<script lang="ts">
+import { defineComponent, computed } from "@vue/composition-api"
+import { Color } from "@/types"
+import { Variant, Size } from "./types"
 
-export default {
-  name: 'WButton',
-  components: {
-    WIcon,
-    WTypography
-  },
+export default defineComponent({
+  name: "WButton",
   props: {
+    icon: {
+      type: String as () => string,
+      default: ""
+    },
     color: {
-      type: String,
-      default: 'primary',
-      validator: val => ['primary', 'secondary'].includes(val)
+      type: String as () => Color,
+      default: "primary" as Color
+    },
+    block: {
+      type: Boolean as () => boolean,
+      default: false
+    },
+    rounded: {
+      type: Boolean as () => boolean,
+      default: false
     },
     disabled: {
-      type: Boolean,
+      type: Boolean as () => boolean,
       default: false
-    },
-    icon: {
-      type: String,
-      default: ''
     },
     size: {
-      type: String,
-      default: 'medium',
-      validator: val => ['small', 'medium', 'large'].includes(val)
-    },
-    fullWidth: {
-      type: Boolean,
-      default: false
+      type: String as () => Size,
+      default: "default" as Size
     },
     variant: {
-      type: String,
-      default: 'contained',
-      validator: val => ['contained', 'text', 'outline'].includes(val)
+      type: String as () => Variant,
+      default: "default" as Variant
     }
   },
-  computed: {
-    contained () {
-      const { colors } = this.$wolfiTheme
+  setup(props, context) {
+    const classes = computed(() => ({
+      button: true,
+      [`button-${props.variant}`]: props.variant,
+      [`button-${props.variant}-color-${props.color}`]: props.color,
+      [`button-size-${props.size}`]: props.size,
+      "button-rounded": props.rounded,
+      "button-disabled": props.disabled,
+      "button-block": props.block
+    }))
 
-      return {
-        backgroundColor: colors[this.color]
-      }
-    },
-    outline () {
-      const { colors } = this.$wolfiTheme
+    const styles = computed(() => ({
+      "--current-color": context.root.$wolfi.colors[props.color]
+    }))
 
-      return {
-        border: `1px solid ${colors[this.color]}`,
-        color: colors[this.color],
-        paddingLeft: '16px',
-        '--hover-color': this.$opacityColor(this.$wolfiTheme.colors[this.color], 0.07)
-      }
-    },
-    text () {
-      const { colors } = this.$wolfiTheme
-
-      return {
-        color: colors[this.color],
-        paddingLeft: '16px',
-        '--hover-color': this.$opacityColor(this.$wolfiTheme.colors[this.color], 0.07)
-      }
-    },
-    iconColor () {
-      const { colors } = this.$wolfiTheme
-
-      return this.variant === 'outline' ? colors[this.color] : 'white'
-    },
-    style () {
-      const { components } = this.$wolfiTheme
-      return {
-        height: components.button.sizes[this.size],
-        paddingLeft: this.icon ? '12px' : '16px',
-        paddingRight: '16px',
-        width: this.fullWidth ? '100%' : null,
-        ...this[this.variant]
-      }
+    return {
+      classes,
+      styles
     }
   }
-}
+})
 </script>
 
 <template>
-  <div
-    class="base"
-    :class="variant"
-    :style="style"
-    @click="$emit('click', $event)"
-  >
-    <div
-      v-if="icon && variant === 'contained'"
-      class="icon-container"
-    >
+  <div :style="[baseStyles, styles]" :class="classes" v-on="$listeners">
+    <span v-if="icon" :class="['button-icon', !$slots.default && 'button-icon-margin-less']">
       <w-icon
+        v-if="icon"
+        size="1x"
         :name="icon"
-        color="iconColor"
-        :scale=".7"
+        :color="color !== 'secondary' ? 'white': 'default'"
       />
-    </div>
-    <w-typography variant="button">
-      <slot />
-    </w-typography>
+    </span>
+    <slot />
   </div>
 </template>
 
 <style scoped>
-.base {
+.button {
   align-items: center;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
   display: inline-flex;
-  justify-content: center;
-  min-width: 64px;
-  transition: all linear .1s;
-  text-transform: uppercase;
-}
-.contained {
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
-}
-
-.contained:hover {
-  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-  filter: brightness(110%);
-  transform: translateY(-1px)
-}
-
-.contained:active {
-  filter: brightness(90%);
-  transform: translateY(1px);
-}
-
-.outline {
+  font-weight: 600;
+  color: #525f7f;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
   background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.625rem 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease;
+  position: relative;
+  text-transform: uppercase;
+  will-change: transform;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+}
+
+.button:active {
+  filter: brightness(90%);
+}
+
+.button:focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08),
+    0 0 0 0 rgba(118, 135, 232, 0.5);
+}
+
+.button:hover {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.button-icon {
+  margin-right: 0.75em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button-icon-margin-less {
+  margin-right: 0;
+}
+
+.button-rounded {
+  border-radius: 30px;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-disabled {
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+.button-disabled:active {
+  filter: none;
+}
+
+.button-size-sm {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.button-size-lg {
+  font-size: 0.875rem;
+  padding: 0.875rem 1rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.button-default {
+  color: #fff;
+  background-color: var(--current-color);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.button-default-color-secondary {
+  color: var(--default-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.button-outlined {
+  color: var(--current-color);
+  border-color: var(--current-color);
+}
+
+.button-outlined:hover {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  background-color: var(--current-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.button-outlined-color-secondary {
+  color: var(--default-color);
+  border-color: var(--secondary-color);
+}
+
+.button-outlined-color-secondary:hover {
+  color: var(--default-color);
+}
+
+.button-text {
+  color: var(--current-color);
+}
+
+.button-text:hover {
+  color: var(--current-color);
   box-shadow: none;
   transform: none;
 }
 
-.outline:hover {
-  background-color: var(--hover-color);
+.button-text-color-secondary {
+  color: var(--default-color);
 }
 
-.text:hover {
-  background-color: var(--hover-color);
-}
-
-.icon-container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-right: 8px;
+.button-text-color-secondary:hover {
+  color: var(--default-color);
 }
 </style>
