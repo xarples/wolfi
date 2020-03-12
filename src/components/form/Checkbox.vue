@@ -69,9 +69,19 @@ export default defineComponent({
   <div class="checkbox" @click="handleClick">
     <div :class="classes" :style="[baseStyles, styles]">
       <transition name="fade">
-        <w-icon name="check" :color="disabled ? 'gray2' : 'white'" size="xs"></w-icon>
+        <w-icon
+          name="check"
+          :color="disabled ? 'gray2' : 'white'"
+          size="xs"
+        ></w-icon>
       </transition>
-      <input type="checkbox" :name="name" :checked="isChecked" :value="isChecked" hidden />
+      <input
+        type="checkbox"
+        :name="name"
+        :checked="isChecked"
+        :value="isChecked"
+        hidden
+      />
     </div>
     <slot />
   </div>

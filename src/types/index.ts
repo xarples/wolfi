@@ -17,3 +17,5 @@ export type Color =
   | "gray9"
   | "white"
   | "transparent"
+
+export type Align = "left" | "center" | "right"
