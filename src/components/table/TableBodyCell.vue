@@ -20,6 +20,7 @@ export default defineComponent({
   display: flex;
   flex: 1;
   padding: 1rem;
-  font-size: 0.8125rem;
+  /* font-size: 0.8125rem; */
+  font-size: 1rem;
 }
 </style>

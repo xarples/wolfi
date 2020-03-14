@@ -24,6 +24,7 @@ export default defineComponent({
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 0.65rem;
+  /* font-size: 1rem; */
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 0.0625rem solid #dee2e6;
