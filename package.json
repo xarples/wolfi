@@ -10,8 +10,7 @@
   "files": [
     "dist/*",
     "wolfi.d.ts",
-    "src/**/*.vue",
-    "!src/serve-dev.*"
+    "src/**/*.vue"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup --watch --config build/rollup.config.js",

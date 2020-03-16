@@ -19,3 +19,5 @@ export type Color =
   | "transparent"
 
 export type Align = "left" | "center" | "right"
+
+export type Size = "default" | "medium" | "large"

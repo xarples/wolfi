@@ -9,6 +9,8 @@ export type Variant =
   | "display2"
   | "display3"
   | "display4"
+  | "text"
+  | "lead"
 
 export type Align = "left" | "center" | "right"
 

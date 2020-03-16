@@ -18,6 +18,10 @@ export default defineComponent({
       type: String as () => Size,
       required: false,
       default: "1x" as Size
+    },
+    animated: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, context) {
@@ -25,7 +29,8 @@ export default defineComponent({
       icon: true,
       fa: true,
       [`fa-${props.name}`]: true,
-      [`fa-${props.size}`]: true
+      [`fa-${props.size}`]: true,
+      "fa-spin": props.animated
     }))
 
     const styles = computed(() => ({
@@ -50,7 +55,7 @@ export default defineComponent({
 .icon {
   align-items: center;
   color: var(--current-color);
-  display: flex;
+  display: inline-flex;
   justify-self: center;
 }
 </style>

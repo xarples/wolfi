@@ -1,7 +1,4 @@
-export type Size =
-  | "xs"
-  | "sm"
-  | "lg"
+export type SpacerSize =
   | "1x"
   | "2x"
   | "3x"

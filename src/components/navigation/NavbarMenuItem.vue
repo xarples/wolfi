@@ -29,22 +29,22 @@ export default defineComponent({
 
 <template>
   <div :class="classes">
-    <w-text v-if="active" color="primary">
-      <strong>
-        <slot />
-      </strong>
-    </w-text>
-    <w-text v-else>
-      <slot />
-    </w-text>
+    <slot />
   </div>
 </template>
 
 <style scoped>
 .navbar-menu-item {
   cursor: pointer;
-  padding: 8px;
-  opacity: 0.7;
+  opacity: 0.5;
+  padding: 0.875rem 1rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  transition: all ease 0.3s;
 }
 
 .navbar-menu-item:hover {

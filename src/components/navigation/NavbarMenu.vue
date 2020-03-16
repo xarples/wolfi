@@ -23,9 +23,9 @@ export default defineComponent({
 .navbar-menu {
   align-items: center;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--gray2-color);
+  /* border-bottom: 1px solid var(--gray2-color); */
   display: flex;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   justify-content: space-between;
 }
 </style>

@@ -162,6 +162,10 @@ export default defineComponent({
   border-color: var(--secondary-color);
 }
 
+.button-default-color-white {
+  color: var(--primary-color);
+}
+
 .button-outlined {
   color: var(--current-color);
   border-color: var(--current-color);

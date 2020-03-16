@@ -61,6 +61,7 @@ export default defineComponent({
 
 <style scoped>
 .heading {
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -120,6 +121,11 @@ export default defineComponent({
   margin-top: 0;
   /* margin-bottom: 1rem; */
   color: var(--current-color);
+  width: 100%;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
 }
 
 .text-align-left {

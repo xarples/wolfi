@@ -1,0 +1,17 @@
+@import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
+
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

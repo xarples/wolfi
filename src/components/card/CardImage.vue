@@ -62,6 +62,7 @@ export default defineComponent({
 
 .card-image-pattern {
   overflow: hidden;
+  max-height: 180px;
 }
 
 .card-image-pattern > img {
