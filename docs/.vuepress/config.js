@@ -16,17 +16,17 @@ module.exports = {
   themeConfig: {
     // displayAllHeaders: true,
     nav: [
-      { text: "Guide", link: "/guide/" },
-      { text: "Components", link: "/components/" },
+      { text: "Guide", link: "/getting-started/quick-start/" },
+      { text: "Components", link: "/components/alerts/" },
       { text: "Languages", link: "/languages/" },
       { text: "Github", link: "https://google.com" }
     ],
     sidebar: {
-      "/foundations": [
+      "/getting-started": [
         {
-          title: "Foundations",
+          title: "Getting started",
           collapsable: false,
-          children: getFoundationChildren()
+          children: getGettingStarted()
         },
         {
           title: "Components",
@@ -36,9 +36,9 @@ module.exports = {
       ],
       "/components": [
         {
-          title: "Foundations",
+          title: "Getting started",
           collapsable: false,
-          children: getFoundationChildren()
+          children: getGettingStarted()
         },
         {
           title: "Components",
@@ -50,12 +50,13 @@ module.exports = {
   }
 }
 
-function getFoundationChildren() {
+function getGettingStarted() {
   return [
-    "/foundations/colors",
-    "/foundations/grid",
-    "/foundations/typography",
-    "/foundations/icons"
+    "/getting-started/quick-start",
+    "/getting-started/colors",
+    "/getting-started/grid",
+    "/getting-started/typography",
+    "/getting-started/icons"
   ]
 }
 

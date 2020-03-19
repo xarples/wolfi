@@ -4,7 +4,7 @@ heroImage: https://raw.githubusercontent.com/xarples/wolfi/master/logo.png
 heroText: Wolfi Design System
 tagline: Wolfi components for Vue.js
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /getting-started/quick-start/
 features:
   - title: Xarples Design Specs
     details: This library wraps the official Xarples components which implement the Wolfi Design specs.

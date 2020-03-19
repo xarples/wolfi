@@ -44,7 +44,6 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   min-width: 0;
-  margin-bottom: 30px;
   position: relative;
   word-wrap: break-word;
 }

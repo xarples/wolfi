@@ -26,15 +26,15 @@ export default defineComponent({
     }))
 
     const alignItems = {
-      left: "flex-start",
-      center: "center",
-      right: "flex-end"
-    }
-
-    const justifyContent = {
       top: "flex-start",
       center: "center",
       bottom: "flex-end"
+    }
+
+    const justifyContent = {
+      left: "flex-start",
+      center: "center",
+      right: "flex-end"
     }
 
     const styles = computed(() => ({
