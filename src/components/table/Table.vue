@@ -7,13 +7,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="table">
+  <div class="w-table">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.table {
+.w-table {
   box-sizing: border-box;
 }
 </style>

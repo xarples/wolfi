@@ -60,12 +60,15 @@ export default defineComponent({
 
 <template>
   <div :style="[baseStyles, styles]" :class="classes" v-on="$listeners">
-    <span v-if="icon" :class="['button-icon', !$slots.default && 'button-icon-margin-less']">
+    <span
+      v-if="icon"
+      :class="['button-icon', !$slots.default && 'button-icon-margin-less']"
+    >
       <w-icon
         v-if="icon"
         size="1x"
         :name="icon"
-        :color="color !== 'secondary' ? 'white': 'default'"
+        :color="color !== 'secondary' ? 'white' : 'default'"
       />
     </span>
     <slot />
@@ -78,6 +81,7 @@ export default defineComponent({
   display: inline-flex;
   font-weight: 600;
   color: #525f7f;
+  cursor: pointer;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -130,6 +134,7 @@ export default defineComponent({
 .button-disabled {
   opacity: 0.65;
   box-shadow: none;
+  cursor: not-allowed;
 }
 
 .button-disabled:active {

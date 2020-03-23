@@ -56,6 +56,7 @@ export default defineComponent({
   border: 0;
   border-radius: 0.3rem;
   outline: 0;
+  z-index: 999;
 }
 
 .modal-content-size-sm {

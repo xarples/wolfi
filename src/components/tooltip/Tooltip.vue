@@ -15,7 +15,7 @@ export default defineComponent({
     },
     color: {
       type: String as () => Color,
-      default: "default" as Color
+      default: "gray9" as Color
     }
   },
   setup(props, context) {
@@ -33,20 +33,19 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="tooltip">
+  <div class="w-tooltip">
     <slot />
-    <div class="tooltip-title" :style="[baseStyles, styles]">{{ title }}</div>
+    <div class="w-tooltip-title" :style="[baseStyles, styles]">{{ title }}</div>
   </div>
 </template>
 
-
 <style scoped>
-.tooltip {
+.w-tooltip {
   display: inline-block;
   position: relative;
 }
 
-.tooltip-title {
+.w-tooltip-title {
   color: white;
   box-sizing: border-box;
   background-color: var(--current-color);
@@ -61,7 +60,7 @@ export default defineComponent({
   width: fit-content;
 }
 
-.tooltip:hover .tooltip-title {
+.w-tooltip:hover .w-tooltip-title {
   transform: translateY(40px);
   opacity: 1;
 }

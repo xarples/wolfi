@@ -4,8 +4,8 @@ import { WolfiPlugin, WolfiPluginOptions } from "wolfi"
 import _Vue from "vue"
 import VueCompositionApi from "@vue/composition-api"
 
-import "./styles/normalize.css"
 import "./styles/base.css"
+import "./styles/normalize.css"
 
 const defaultOptions: WolfiPluginOptions = {
   colors: {
@@ -14,7 +14,7 @@ const defaultOptions: WolfiPluginOptions = {
     success: "#2dce89",
     danger: "#f5365c",
     warning: "#ffdd57", //"#fb6340",
-    default: "#3c4d69",
+    default: "none", //"#3c4d69",
     secondary: "#f4f5f7",
     gray1: "#f6f9fc",
     gray2: "#e9ecef",

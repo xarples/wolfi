@@ -8,7 +8,7 @@ export default defineComponent({
   props: {
     color: {
       type: String as () => Color,
-      default: "primary" as Color
+      default: "default" as Color
     }
   },
   components: {

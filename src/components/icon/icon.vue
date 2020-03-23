@@ -22,12 +22,17 @@ export default defineComponent({
     animated: {
       type: Boolean,
       default: false
+    },
+    fab: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, context) {
     const classes = computed(() => ({
       icon: true,
-      fa: true,
+      fas: props.fab ? false : true,
+      fab: props.fab,
       [`fa-${props.name}`]: true,
       [`fa-${props.size}`]: true,
       "fa-spin": props.animated
@@ -46,7 +51,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <i :style="[baseStyles, styles]" :class="classes">
+  <i :style="[baseStyles, styles]" :class="classes" v-on="$listeners">
     <slot />
   </i>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, computed } from "@vue/composition-api"
+import { defineComponent, computed, ref } from "@vue/composition-api"
 import { Color } from "@/types"
 import WIcon from "@/components/icon/Icon.vue"
 
@@ -26,6 +26,12 @@ export default defineComponent({
     WIcon
   },
   setup(props, context) {
+    const isShow = ref(true)
+
+    const handleDismiss = () => {
+      isShow.value = false
+    }
+
     const classes = computed(() => ({
       alert: true,
       [`alert-color-${props.color}`]: true
@@ -36,6 +42,8 @@ export default defineComponent({
     }))
 
     return {
+      handleDismiss,
+      isShow,
       classes,
       styles
     }
@@ -44,13 +52,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :style="[baseStyles, styles]" :class="classes">
+  <div v-if="isShow" :style="[baseStyles, styles]" :class="classes">
     <span v-if="icon" class="alert-icon">
       <w-icon
         v-if="icon"
         size="1x"
         :name="icon"
-        :color="color !== 'secondary' ? 'white': 'default'"
+        :color="color !== 'secondary' ? 'white' : 'default'"
       />
     </span>
     <slot />
@@ -59,7 +67,8 @@ export default defineComponent({
         v-if="dismissible"
         size="1x"
         name="times"
-        :color="color !== 'secondary' ? 'white': 'default'"
+        :color="color !== 'secondary' ? 'white' : 'default'"
+        @click="handleDismiss"
       />
     </span>
   </div>
@@ -69,14 +78,15 @@ export default defineComponent({
 .alert {
   align-items: center;
   border: 0;
-  border-radius: 0.25rem;
   background-color: var(--current-color);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
   color: white;
   display: flex;
   padding: 1rem 1.5rem;
   position: relative;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -99,6 +109,7 @@ export default defineComponent({
   transition: all 0.15s ease;
   opacity: 0.6;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .alert-close:hover {

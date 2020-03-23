@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, computed } from "@vue/composition-api"
-import { Variant, Align } from "@/components/text/types"
+import { Variant, Align, Transform } from "@/components/text/types"
 import { Color } from "@/types"
 
 export default defineComponent({
@@ -20,6 +20,11 @@ export default defineComponent({
       type: String as () => Color,
       required: false,
       default: "default" as Color
+    },
+    transform: {
+      type: String as () => Transform,
+      required: false,
+      default: "default" as Transform
     }
   },
   setup(props, context) {
@@ -37,7 +42,8 @@ export default defineComponent({
         lead: isLead ? true : false,
         [`text-${props.variant}`]: true,
         [`text-align-${props.align}`]: props.align,
-        [`text-${props.color}`]: props.color
+        [`text-${props.color}`]: props.color,
+        [`is-${props.transform}`]: props.transform
       }
     })
 
@@ -60,8 +66,20 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.is-capitalize {
+  text-transform: capitalize;
+}
+
 .heading {
-  margin-top: 0.5rem;
+  box-sizing: border-box;
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -119,7 +137,7 @@ export default defineComponent({
   font-weight: 300;
   line-height: 1.7;
   margin-top: 0;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 0.5rem;
   color: var(--current-color);
   width: 100%;
   /* margin-block-start: 1em;

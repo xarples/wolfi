@@ -19,9 +19,10 @@ export default defineComponent({
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 </style>

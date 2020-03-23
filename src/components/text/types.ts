@@ -21,3 +21,5 @@ export type Color =
   | "danger"
   | "warning"
   | "default"
+
+export type Transform = "default" | "lowercase" | "uppercase" | "capitalize"

@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, computed } from "@vue/composition-api"
-import { Color } from "@/types"
+import { Color, Size } from "@/types"
 
 export default defineComponent({
   name: "WBadge",
@@ -12,13 +12,18 @@ export default defineComponent({
     rounded: {
       type: Boolean as () => boolean,
       default: false
+    },
+    size: {
+      type: String as () => Size,
+      default: "default" as Size
     }
   },
   setup(props, context) {
     const classes = computed(() => ({
       badge: true,
       "badge-rounded": props.rounded,
-      [`badge-color-${props.color}`]: props.color
+      [`badge-color-${props.color}`]: props.color,
+      [`is-${props.size}`]: props.size
     }))
 
     const styles = computed(() => ({
@@ -39,14 +44,13 @@ export default defineComponent({
   </span>
 </template>
 
-
 <style scoped>
 .badge {
   background-color: var(--current-color);
   color: white;
   display: inline-block;
   padding: 0.35rem 0.375rem;
-  font-size: 66%;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
   text-align: center;
@@ -65,5 +69,15 @@ export default defineComponent({
 
 .badge-color-secondary {
   color: var(--default-color);
+}
+
+.is-medium {
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.is-large {
+  font-size: 1.25rem;
+  font-weight: inherit;
 }
 </style>

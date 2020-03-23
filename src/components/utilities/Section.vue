@@ -11,7 +11,7 @@ export default defineComponent({
     },
     color: {
       type: String as () => Color,
-      default: "white" as Color
+      default: "transparent" as Color
     }
   },
   setup(props, context) {
