@@ -1,6 +1,6 @@
-import plugin_gridsome_vue_remark_5 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs_V2/node_modules/@gridsome/vue-remark/gridsome.client.js"
-import plugin_gridsome_plugin_tailwindcss_7 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs_V2/node_modules/gridsome-plugin-tailwindcss/gridsome.client.js"
-import plugin_gridsome_plugin_google_analytics_8 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs_V2/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
+import plugin_gridsome_vue_remark_5 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/node_modules/@gridsome/vue-remark/gridsome.client.js"
+import plugin_gridsome_plugin_tailwindcss_7 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/node_modules/gridsome-plugin-tailwindcss/gridsome.client.js"
+import plugin_gridsome_plugin_google_analytics_8 from "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
 
 export default [
   {

@@ -30,6 +30,7 @@ export default defineComponent({
 <style scoped>
 .dropdown-item {
   box-sizing: border-box;
+  cursor: pointer;
   display: block;
   width: 100%;
   font-weight: 400;

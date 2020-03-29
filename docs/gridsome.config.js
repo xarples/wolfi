@@ -12,9 +12,9 @@ module.exports = {
   },
   siteUrl: process.env.SITE_URL ? process.env.SITE_URL : "https://example.com",
   settings: {
-    web: process.env.URL_WEB || false,
+    web: process.env.URL_WEB || "https://example.com",
     twitter: process.env.URL_TWITTER || false,
-    github: process.env.URL_GITHUB || false,
+    github: process.env.URL_GITHUB || "https://github.com/xarples/wolfi",
     nav: {
       links: [
         { path: "/docs/getting-started/", title: "Docs" }

@@ -28,30 +28,37 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :class="classes">
-    <w-text v-if="active" color="primary">
-      <strong>
-        <slot />
-      </strong>
-    </w-text>
-    <w-text v-else color="default">
-      <slot />
-    </w-text>
+  <div :class="classes" :style="baseStyles">
+    <span v-if="active" class="sidebar-menu-item-icon-container">
+      <w-icon size="xs" name="circle" />
+    </span>
+    <slot />
   </div>
 </template>
 
 <style scoped>
 .sidebar-menu-item {
+  align-items: center;
+  height: 27px;
   cursor: pointer;
-  padding: 8px 16px;
-  opacity: 0.7;
+  display: flex;
+  padding: 0.2rem 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: 0.3s all;
 }
 
 .sidebar-menu-item:hover {
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 .sidebar-menu-item-is-active {
-  opacity: 1;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.sidebar-menu-item-icon-container {
+  display: flex;
+  margin-right: 0.5rem;
 }
 </style>

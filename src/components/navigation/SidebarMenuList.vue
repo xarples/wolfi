@@ -19,7 +19,7 @@ export default defineComponent({
 
 <template>
   <div class="sidebar-menu-list">
-    <w-text variant="h5">
+    <w-text variant="h6" transform="uppercase">
       <strong>{{ title }}</strong>
     </w-text>
     <slot />
@@ -29,5 +29,14 @@ export default defineComponent({
 <style scoped>
 .sidebar-menu {
   padding: 1.5rem 0;
+}
+
+.sidebar-menu-list:not(:first-child) {
+  border-top: 1px solid var(--gray2-color);
+  padding-top: 1rem;
+}
+
+.sidebar-menu-list:not(:last-child) {
+  padding-bottom: 1rem;
 }
 </style>

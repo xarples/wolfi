@@ -1,8 +1,6 @@
 <script lang="ts">
 import { defineComponent, computed } from "@vue/composition-api"
 
-import WText from "@/components/text/Text.vue"
-
 export default defineComponent({
   name: "WNavbarMenuItem",
   props: {
@@ -10,9 +8,6 @@ export default defineComponent({
       type: Boolean,
       default: false
     }
-  },
-  components: {
-    WText
   },
   setup(props) {
     const classes = computed(() => ({
@@ -36,26 +31,19 @@ export default defineComponent({
 <style scoped>
 .navbar-menu-item {
   cursor: pointer;
-  opacity: 0.5;
-  padding: 0.875rem 1rem;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  line-height: 1;
-  font-weight: 500;
-  transition: all ease 0.3s;
+  display: flex;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: 0.3s all;
 }
 
 .navbar-menu-item:hover {
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 .navbar-menu-item-is-active {
-  opacity: 1;
-}
-
-.navbar-menu-item img {
-  max-height: 1.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 </style>
