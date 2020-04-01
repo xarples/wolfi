@@ -13,12 +13,13 @@
     "src/**/*.vue"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup --watch --config build/rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "build:watch": "cross-env NODE_ENV=production rollup --watch --config build/rollup.config.js",
+    "docs:build": "cd ./docs && npm run build",
+    "docs:dev": "vuepress dev docs"
   },
   "dependencies": {
     "@vue/composition-api": "^0.4.0"
