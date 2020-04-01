@@ -116,3 +116,12 @@ Add **@xarples/wolfi-nuxt** to modules section of nuxt.config.js:
   ]
 }
 ```
+
+## Compatibility
+
+- Supports Vue.js 2.x
+- Supports SSR
+- Supports [Nuxt.js](https://nuxtjs.org/)
+- Supports TypeScript
+- Supports [Electron](http://electron.atom.io/)
+- Most components and features support IE9 and above browsers, some components and features do not support IE
