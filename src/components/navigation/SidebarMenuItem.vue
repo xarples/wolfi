@@ -29,9 +29,6 @@ export default defineComponent({
 
 <template>
   <div :class="classes" :style="baseStyles">
-    <span v-if="active" class="sidebar-menu-item-icon-container">
-      <w-icon size="xs" name="circle" />
-    </span>
     <slot />
   </div>
 </template>

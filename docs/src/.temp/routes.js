@@ -63,17 +63,17 @@ export default [
     }
   },
   {
-    path: "/docs/components/images/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--images-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/components/images.md")
-    }
-  },
-  {
     path: "/docs/essentials/grid/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--essentials--grid-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/essentials/grid.md")
+    }
+  },
+  {
+    path: "/docs/components/images/",
+    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--images-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/components/images.md")
     }
   },
   {
@@ -98,17 +98,17 @@ export default [
     }
   },
   {
-    path: "/docs/components/collapse/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--collapse-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/components/collapse.md")
-    }
-  },
-  {
     path: "/docs/components/cards/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--cards-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/components/cards.md")
+    }
+  },
+  {
+    path: "/docs/components/collapse/",
+    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--collapse-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/components/collapse.md")
     }
   },
   {
@@ -144,13 +144,6 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--customization--index-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/customization/index.md")
-    }
-  },
-  {
-    path: "/docs/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/src/templates/MarkdownPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--index-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/docs/content/docs/index.md")
     }
   },
   {

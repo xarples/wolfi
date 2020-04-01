@@ -58,6 +58,7 @@ export default defineComponent({
   right: 0;
   white-space: nowrap;
   width: fit-content;
+  z-index: 9999;
 }
 
 .w-tooltip:hover .w-tooltip-title {

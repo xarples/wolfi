@@ -8,9 +8,7 @@
   },
   "dependencies": {
     "@gridsome/vue-remark": "^0.1.10",
-    "gridsome": "^0.7.0",
-    "install": "^0.13.0",
-    "npm": "^6.14.3"
+    "gridsome": "^0.7.0"
   },
   "devDependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
