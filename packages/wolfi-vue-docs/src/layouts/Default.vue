@@ -9,9 +9,7 @@
         <LayoutHeader />
       </header>
 
-      <main
-        class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background"
-      >
+      <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
         <aside
           v-if="hasSidebar"
           class="sidebar"
@@ -23,10 +21,7 @@
           </div>
         </aside>
 
-        <div
-          class="w-full pb-24"
-          :class="{ 'pl-0 lg:pl-12 lg:w-3/4': hasSidebar }"
-        >
+        <div class="w-full pb-24" :class="{ 'pl-0 lg:pl-12 lg:w-3/4': hasSidebar }">
           <slot />
         </div>
       </main>
@@ -126,6 +121,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("../../../wolfi-vue/dist/wolfi.min.css");
+
 :root {
   --color-ui-background: theme("colors.white");
   --color-ui-typo: theme("colors.gray.700");
