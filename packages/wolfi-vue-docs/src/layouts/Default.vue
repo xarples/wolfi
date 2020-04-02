@@ -121,8 +121,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("../../../wolfi-vue/dist/wolfi.min.css");
-
 :root {
   --color-ui-background: theme("colors.white");
   --color-ui-typo: theme("colors.gray.700");
