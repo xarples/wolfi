@@ -1,5 +1,4 @@
 {
-  "extends": "./packages/wolfi-vue/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -16,8 +15,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": ["node", "vue"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["packages/wolfi-vue"],
   "exclude": ["node_modules", "dist"]
 }
