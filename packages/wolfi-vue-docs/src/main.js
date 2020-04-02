@@ -4,7 +4,7 @@ import DefaultLayout from "~/layouts/Default.vue"
 
 import Wolfi from "@xarples/wolfi-vue"
 
-// import "~/assets/main.css"
+import "~/assets/wolfi.min.css"
 
 export default function(Vue, { router, head, isClient }) {
   Vue.use(Wolfi)
