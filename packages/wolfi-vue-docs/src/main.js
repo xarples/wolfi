@@ -4,13 +4,18 @@ import DefaultLayout from "~/layouts/Default.vue"
 
 import Wolfi from "@xarples/wolfi-vue"
 
-import "@xarples/wolfi-vue/dist/wolfi.min.css"
+import "~/assets/main.css"
 
 export default function(Vue, { router, head, isClient }) {
   Vue.use(Wolfi)
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout)
+
+  head.link.push({
+    rel: "stylesheet",
+    href: "~/assets/main.css"
+  })
 
   head.link.push({
     rel: "stylesheet",
