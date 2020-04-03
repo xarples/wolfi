@@ -4,11 +4,22 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const path = require("path")
+
+function addStyleResource(rule) {
+  rule
+    .use("style-resource")
+    .loader("style-resources-loader")
+    .options({
+      patterns: [path.resolve(__dirname, "../wolfi-vue/dist/wolfi.min.css")],
+    })
+}
+
 module.exports = {
   siteName: "Wolfi",
   icon: {
     favicon: "./src/assets/favicon.png",
-    touchicon: "./src/assets/favicon.png"
+    touchicon: "./src/assets/favicon.png",
   },
   siteUrl: process.env.SITE_URL ? process.env.SITE_URL : "https://example.com",
   settings: {
@@ -17,9 +28,9 @@ module.exports = {
     github: process.env.URL_GITHUB || "https://github.com/xarples/wolfi",
     nav: {
       links: [
-        { path: "/docs/getting-started/", title: "Docs" }
+        { path: "/docs/getting-started/", title: "Docs" },
         // { path: "/docs/components/alerts/", title: "Components" }
-      ]
+      ],
     },
     sidebar: [
       {
@@ -29,8 +40,8 @@ module.exports = {
             title: "Getting Started",
             items: [
               "/docs/getting-started/",
-              "/docs/getting-started/quick-start/"
-            ]
+              "/docs/getting-started/quick-start/",
+            ],
           },
           {
             title: "Essentials",
@@ -38,12 +49,12 @@ module.exports = {
               "/docs/essentials/colors/",
               "/docs/essentials/grid/",
               "/docs/essentials/icons/",
-              "/docs/essentials/typography/"
-            ]
+              "/docs/essentials/typography/",
+            ],
           },
           {
             title: "Customization",
-            items: ["/docs/customization/"]
+            items: ["/docs/customization/"],
           },
           {
             title: "Components",
@@ -61,9 +72,9 @@ module.exports = {
               "/docs/components/popovers/",
               "/docs/components/tables/",
               "/docs/components/toasts/",
-              "/docs/components/tooltips/"
-            ]
-          }
+              "/docs/components/tooltips/",
+            ],
+          },
           // {
           //   title: "Getting Started",
           //   items: [
@@ -77,9 +88,9 @@ module.exports = {
           //   title: "Configuration",
           //   items: ["/docs/settings/", "/docs/sidebar/"]
           // }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   plugins: [
     {
@@ -89,8 +100,8 @@ module.exports = {
         path: "**/*.md",
         baseDir: "./content", // Where .md files are located
         template: "./src/templates/MarkdownPage.vue",
-        plugins: ["@gridsome/remark-prismjs"]
-      }
+        plugins: ["@gridsome/remark-prismjs"],
+      },
     },
     {
       use: "@gridsome/source-filesystem",
@@ -102,9 +113,9 @@ module.exports = {
         remark: {
           externalLinksTarget: "_blank",
           externalLinksRel: ["noopener", "noreferrer"],
-          plugins: ["@gridsome/remark-prismjs"]
-        }
-      }
+          plugins: ["@gridsome/remark-prismjs"],
+        },
+      },
     },
 
     {
@@ -113,21 +124,29 @@ module.exports = {
         tailwindConfig: "./tailwind.config.js",
         purgeConfig: {
           // Prevent purging of prism classes.
-          whitelistPatternsChildren: [/token$/]
-        }
-      }
+          whitelistPatternsChildren: [/token$/],
+        },
+      },
     },
 
     {
       use: "@gridsome/plugin-google-analytics",
       options: {
-        id: process.env.GA_ID ? process.env.GA_ID : "XX-999999999-9"
-      }
+        id: process.env.GA_ID ? process.env.GA_ID : "XX-999999999-9",
+      },
     },
 
     {
       use: "@gridsome/plugin-sitemap",
-      options: {}
-    }
-  ]
+      options: {},
+    },
+  ],
+  chainWebpack(config) {
+    // Load variables for all vue-files
+    const types = ["vue-modules", "vue", "normal-modules", "normal"]
+
+    types.forEach((type) => {
+      addStyleResource(config.module.rule("css").oneOf(type))
+    })
+  },
 }
