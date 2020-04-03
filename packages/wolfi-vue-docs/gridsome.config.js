@@ -3,18 +3,6 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-
-const path = require("path")
-
-function addStyleResource(rule) {
-  rule
-    .use("style-resource")
-    .loader("style-resources-loader")
-    .options({
-      patterns: [path.resolve(__dirname, "../wolfi-vue/dist/wolfi.min.css")],
-    })
-}
-
 module.exports = {
   siteName: "Wolfi",
   icon: {
@@ -141,12 +129,4 @@ module.exports = {
       options: {},
     },
   ],
-  chainWebpack(config) {
-    // Load variables for all vue-files
-    const types = ["vue-modules", "vue", "normal-modules", "normal"]
-
-    types.forEach((type) => {
-      addStyleResource(config.module.rule("css").oneOf(type))
-    })
-  },
 }
