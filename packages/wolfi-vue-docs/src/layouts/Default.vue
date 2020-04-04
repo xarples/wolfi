@@ -8,6 +8,11 @@
       >
         <LayoutHeader />
       </header>
+      <w-alert
+        color="warning"
+        dismissible
+        :style="{ fontWeight: 'bold', color: 'black', display: 'flex', justifyContent: 'center' }"
+      >Wolfi Vue version is work in progress</w-alert>
 
       <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
         <aside
