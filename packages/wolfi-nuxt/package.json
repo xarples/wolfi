@@ -1,0 +1,22 @@
+{
+  "name": "@xarples/wolfi-nuxt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@xarples/wolfi-vue": "file:../wolfi-vue"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^0.7.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
