@@ -64,6 +64,8 @@ Just download or use these as CDN:
     </div>
 
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/@vue/composition-api/dist/vue-composition-api.umd.js"></script>
+
     <!-- Full bundle -->
     <script src="https://unpkg.com/@xarples/wolfi-vue/dist/wolfi.min.js"></script>
 

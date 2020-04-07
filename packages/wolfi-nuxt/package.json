@@ -17,9 +17,7 @@
     "@xarples/wolfi-vue": "^0.0.4-alpha.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^0.7.1"
-  },
-  "peerDependencies": {
+    "@nuxt/types": "^0.7.1",
     "vue": "^2.6.10"
   },
   "engines": {
