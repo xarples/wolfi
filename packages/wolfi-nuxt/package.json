@@ -1,14 +1,17 @@
 {
   "name": "@xarples/wolfi-nuxt",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "Wolfi nuxt plugin",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "tsc"
   },
   "dependencies": {
-    "@xarples/wolfi-vue": "file:../wolfi-vue"
+    "@xarples/wolfi-vue": "*"
   },
   "devDependencies": {
     "@nuxt/types": "^0.7.1"
