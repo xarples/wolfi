@@ -1,7 +1,7 @@
 {
   "name": "@xarples/wolfi-vue",
   "version": "0.0.2-alpha.0",
-  "description": "",
+  "description": "Wolfi vue",
   "main": "./dist/wolfi.ssr.js",
   "browser": "./dist/wolfi.esm.js",
   "module": "./dist/wolfi.esm.js",
@@ -54,5 +54,5 @@
   "engines": {
     "node": ">=8"
   },
-  "gitHead": "aabcf9c866c574e0445d17950d78bbf6d168d50c"
+  "gitHead": "237afd4721591cf0404dd41e2645d0b472d7596b"
 }

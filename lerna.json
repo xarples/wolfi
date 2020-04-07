@@ -1,6 +1,9 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "0.0.2-alpha.0"
+  "npmClient": "npm",
+  "packages": ["packages/*"],
+  "version": "independent",
+  "bootstrap": {
+    "ignore": ["wolfi-*-docs"],
+    "npmClientArgs": ["--no-package-lock"]
+  }
 }

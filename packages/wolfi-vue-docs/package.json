@@ -1,6 +1,5 @@
 {
   "name": "@xarples/wolfi-vue-docs",
-  "private": true,
   "scripts": {
     "build": "gridsome build",
     "dev": "gridsome develop",
@@ -8,7 +7,7 @@
   },
   "dependencies": {
     "@gridsome/vue-remark": "^0.1.10",
-    "@xarples/wolfi-vue": "*",
+    "@xarples/wolfi-vue": "0.0.2-alpha.0",
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
