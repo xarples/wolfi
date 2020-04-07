@@ -1,5 +1,6 @@
 {
   "name": "@xarples/wolfi-vue-docs",
+  "version": "0.0.2-alpha.0",
   "scripts": {
     "build": "gridsome build",
     "dev": "gridsome develop",
