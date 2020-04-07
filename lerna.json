@@ -1,9 +1,5 @@
 {
   "npmClient": "npm",
   "packages": ["packages/*"],
-  "version": "independent",
-  "bootstrap": {
-    "ignore": ["wolfi-*-docs"],
-    "npmClientArgs": ["--no-package-lock"]
-  }
+  "version": "independent"
 }
