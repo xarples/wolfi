@@ -34,6 +34,7 @@ export default defineComponent({
 
 <style scoped>
 .container {
+  height: 100%;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -42,6 +43,7 @@ export default defineComponent({
 }
 
 .container-fluid {
+  height: 100%;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

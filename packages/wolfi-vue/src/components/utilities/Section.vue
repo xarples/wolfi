@@ -41,6 +41,7 @@ export default defineComponent({
 <style scoped>
 .section {
   background-color: var(--current-color);
+  height: 100%;
 }
 
 .is-default {
