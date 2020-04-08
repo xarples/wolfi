@@ -59,8 +59,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :style="[baseStyles, styles]" :class="classes" v-on="$listeners">
-    <span v-if="icon" :class="['w-button-icon', !$slots.default && 'w-button-icon-margin-less']">
+  <button :style="[baseStyles, styles]" :class="classes" v-on="$listeners">
+    <span
+      v-if="icon"
+      :class="['w-button-icon', !$slots.default && 'w-button-icon-margin-less']"
+    >
       <w-icon
         v-if="icon"
         size="1x"
@@ -69,7 +72,7 @@ export default defineComponent({
       />
     </span>
     <slot />
-  </div>
+  </button>
 </template>
 
 <style scoped>

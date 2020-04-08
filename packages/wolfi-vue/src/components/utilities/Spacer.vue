@@ -11,7 +11,7 @@ export default defineComponent({
       default: "1x" as SpacerSize
     }
   },
-  setup(props, context) {
+  setup(props) {
     const styles = computed(() => ({
       height: `${props.size.charAt(0)}rem`
     }))
@@ -27,5 +27,4 @@ export default defineComponent({
   <div :style="[styles]"></div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
