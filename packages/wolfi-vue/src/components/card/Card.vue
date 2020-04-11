@@ -54,6 +54,7 @@ export default defineComponent({
 
 .is-bordered {
   border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
 }
 
 .is-shadow {
