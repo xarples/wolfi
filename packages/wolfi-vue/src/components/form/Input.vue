@@ -30,12 +30,13 @@ export default defineComponent({
 
 <template>
   <input
+    class="input"
     :type="type"
     :name="name"
     :value="value"
     :placeholder="placeholder"
     v-on="$listeners"
-    class="input"
+    @input="$emit('input', $event.target.value)"
   />
 </template>
 
