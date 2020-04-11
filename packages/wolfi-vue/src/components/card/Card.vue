@@ -7,12 +7,17 @@ export default defineComponent({
   props: {
     color: {
       type: String as () => Color,
-      default: "transparent" as Color
+      default: "white" as Color
+    },
+    shadow: {
+      type: Boolean,
+      default: true
     }
   },
   setup(props, context) {
     const classes = computed(() => ({
-      card: true
+      card: true,
+      "is-shadow": props.shadow
     }))
 
     const styles = computed(() => ({
@@ -37,7 +42,6 @@ export default defineComponent({
 .card {
   border: 0;
   border-radius: 0.25rem;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   background-color: var(--current-color);
   background-clip: border-box;
   display: flex;
@@ -45,5 +49,10 @@ export default defineComponent({
   min-width: 0;
   position: relative;
   word-wrap: break-word;
+}
+
+.is-shadow {
+  box-shadow: 0 15px 35px rgba(170, 170, 185, 0.1),
+    0 5px 15px rgba(0, 0, 0, 0.07);
 }
 </style>
