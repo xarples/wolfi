@@ -3,12 +3,20 @@ import { defineComponent } from "@vue/composition-api"
 
 export default defineComponent({
   name: "WInput",
+  model: {
+    prop: "value",
+    event: "input"
+  },
   props: {
     type: {
       type: String,
       default: "text"
     },
     name: {
+      type: String,
+      default: ""
+    },
+    value: {
       type: String,
       default: ""
     },
@@ -21,7 +29,14 @@ export default defineComponent({
 </script>
 
 <template>
-  <input :type="type" :name="name" :placeholder="placeholder" v-on="$listeners" class="input" />
+  <input
+    :type="type"
+    :name="name"
+    :value="value"
+    :placeholder="placeholder"
+    v-on="$listeners"
+    class="input"
+  />
 </template>
 
 <style scoped>
