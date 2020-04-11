@@ -56,8 +56,8 @@ export default defineComponent({
 .container-fluid {
   height: 100%;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
 }
