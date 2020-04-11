@@ -45,6 +45,7 @@ export default defineComponent({
 
 <style scoped>
 .container {
+  background-color: var(--current-color);
   height: 100%;
   width: 100%;
   padding-right: 15px;
