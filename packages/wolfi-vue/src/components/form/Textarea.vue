@@ -5,7 +5,7 @@ export default defineComponent({
   name: "WInput",
   model: {
     prop: "value",
-    event: "input"
+    event: "update"
   },
   props: {
     type: {
@@ -30,12 +30,13 @@ export default defineComponent({
 
 <template>
   <textarea
+    class="input"
     :type="type"
     :name="name"
     :value="value"
     :placeholder="placeholder"
     v-on="$listeners"
-    class="input"
+    @input="$emit('update', $event.target.value)"
   />
 </template>
 
