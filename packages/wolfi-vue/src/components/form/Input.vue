@@ -3,6 +3,7 @@ import { defineComponent } from "@vue/composition-api"
 
 export default defineComponent({
   name: "WInput",
+  inheritAttrs: false,
   model: {
     prop: "value",
     event: "input"
