@@ -17,4 +17,8 @@ export default defineComponent({
   display: flex;
   box-sizing: border-box;
 }
+
+.table-row:not(:first-child) {
+  border-top: 0.0625rem solid #dee2e6;
+}
 </style>

@@ -16,7 +16,6 @@ export default defineComponent({
 .table-body-cell {
   align-items: center;
   box-sizing: border-box;
-  border-top: 0.0625rem solid #dee2e6;
   display: flex;
   flex: 1;
   padding: 1rem;
