@@ -17,6 +17,7 @@ export default defineComponent({
   setup(props, context) {
     const classes = computed(() => ({
       card: true,
+      "is-bordered": !props.shadow,
       "is-shadow": props.shadow
     }))
 
@@ -49,6 +50,10 @@ export default defineComponent({
   min-width: 0;
   position: relative;
   word-wrap: break-word;
+}
+
+.is-bordered {
+  border: 0.0625rem solid rgba(0, 0, 0, 0.05);
 }
 
 .is-shadow {
