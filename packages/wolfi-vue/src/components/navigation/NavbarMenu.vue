@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api"
+import { defineComponent, computed } from "@vue/composition-api"
 import { Color } from "@/types"
 
 export default defineComponent({
@@ -9,23 +9,28 @@ export default defineComponent({
       type: String as () => Color,
       default: "white" as Color
     }
+  },
+  setup(props, context) {
+    const styles = computed(() => ({
+      "--current-color": context.root.$wolfi.colors[props.color]
+    }))
+
+    return {
+      styles
+    }
   }
 })
 </script>
 
 <template>
-  <div class="navbar-menu" :style="[baseStyles]">
+  <div class="navbar-menu" :style="[baseStyles, styles]">
     <slot />
   </div>
 </template>
 
 <style scoped>
 .navbar-menu {
-  align-items: center;
   box-sizing: border-box;
-  /* border-bottom: 1px solid var(--gray2-color); */
-  display: flex;
-  /* padding: 0.5rem; */
-  justify-content: space-between;
+  background-color: var(--current-color);
 }
 </style>
