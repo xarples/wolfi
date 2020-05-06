@@ -14,10 +14,10 @@ export default [
     }
   },
   {
-    path: "/docs/components/tables/",
+    path: "/docs/components/toasts/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--tables-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/tables.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--toasts-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/toasts.md")
     }
   },
   {
@@ -28,10 +28,10 @@ export default [
     }
   },
   {
-    path: "/docs/components/toasts/",
+    path: "/docs/components/tables/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--toasts-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/toasts.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--tables-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/tables.md")
     }
   },
   {
@@ -63,17 +63,17 @@ export default [
     }
   },
   {
-    path: "/docs/components/images/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--images-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/images.md")
-    }
-  },
-  {
     path: "/docs/essentials/grid/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--essentials--grid-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/essentials/grid.md")
+    }
+  },
+  {
+    path: "/docs/components/images/",
+    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--images-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/images.md")
     }
   },
   {
@@ -112,17 +112,17 @@ export default [
     }
   },
   {
-    path: "/docs/components/buttons/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--buttons-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/buttons.md")
-    }
-  },
-  {
     path: "/docs/components/badges/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--badges-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/badges.md")
+    }
+  },
+  {
+    path: "/docs/components/buttons/",
+    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/src/templates/MarkdownPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--content--docs--components--buttons-md" */ "/Users/Guillermo/Documents/projects/xarples/wolfi/packages/wolfi-vue-docs/content/docs/components/buttons.md")
     }
   },
   {

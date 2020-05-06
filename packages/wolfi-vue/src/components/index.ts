@@ -41,6 +41,8 @@ export { default as WSidebarMenu } from "@/components/navigation/SidebarMenu.vue
 export { default as WSidebarMenuList } from "@/components/navigation/SidebarMenuList.vue"
 export { default as WSidebarMenuItem } from "@/components/navigation/SidebarMenuItem.vue"
 export { default as WSection } from "@/components/utilities/Section.vue"
+export { default as WSelect } from "@/components/form/Select.vue"
+export { default as WSelectOption } from "@/components/form/SelectOption.vue"
 export { default as WSpacer } from "@/components/utilities/Spacer.vue"
 export { default as WTable } from "@/components/table/Table.vue"
 export { default as WTableBody } from "@/components/table/TableBody.vue"

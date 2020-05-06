@@ -5,6 +5,7 @@ next: "/docs/components/images/"
 ---
 
 import RadioSample from '~/components/RadioSample'
+import SelectSample from '~/components/SelectSample'
 
 # Forms
 
@@ -69,4 +70,19 @@ import RadioSample from '~/components/RadioSample'
 
 ```html
 <w-textarea placeholder="Write a large message here" />
+```
+
+<br/>
+
+## Select
+
+<SelectSample />
+
+```html
+<w-select v-model="selected">
+  <w-select-option value="1">Test</w-select-option>
+  <w-select-option value="2">Test</w-select-option>
+  <w-select-option value="3">Test</w-select-option>
+  <w-select-option value="4">Test</w-select-option>
+</w-select>
 ```
