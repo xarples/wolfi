@@ -1,5 +1,9 @@
+*.log
+.cache
+.DS_Store
+src/.temp
 node_modules
 dist
-static
-logo.ai
-.DS_Store
+!.env.example
+.env
+.env.*
