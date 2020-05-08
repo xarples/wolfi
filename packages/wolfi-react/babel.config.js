@@ -1,3 +1,7 @@
 module.exports = {
-  plugins: ["styled-jsx/babel"]
+  presets: [
+    "@babel/preset-env",
+    ["@babel/preset-typescript", { allExtensions: true }],
+  ],
+  plugins: ["styled-jsx/babel"],
 }
