@@ -13,15 +13,13 @@ npm install --save wolfi-react
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from "react"
 
-import MyComponent from 'wolfi-react'
+import { Button } from "wolfi-react"
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <Button />
   }
 }
 ```
