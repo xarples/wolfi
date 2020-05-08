@@ -7,11 +7,11 @@ interface propTypes {
 const Button = (props: propTypes) => {
   return (
     <div>
-      <style jsx>{`
+      {/* <style jsx>{`
         button {
           color: red;
         }
-      `}</style>
+      `}</style> */}
       <button>{props.text}</button>
     </div>
   )
