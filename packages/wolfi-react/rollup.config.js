@@ -34,9 +34,16 @@ export default {
       sourcemap: true,
     },
   ],
+  external: ["react", "react-dom"],
   plugins: [
     replace({
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
+    }),
+    alias({
+      resolve: [".js", ".jsx", ".ts", ".tsx"],
+      entries: {
+        "@": path.resolve(projectRoot, "src"),
+      },
     }),
     babel({
       exclude: "node_modules/**",
@@ -51,12 +58,7 @@ export default {
         "@babel/preset-react",
       ],
     }),
-    alias({
-      resolve: [".js", ".jsx", ".ts", ".tsx"],
-      entries: {
-        "@": path.resolve(projectRoot, "src"),
-      },
-    }),
+
     commonjs(),
   ],
 }
