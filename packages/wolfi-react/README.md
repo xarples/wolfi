@@ -1,25 +1,27 @@
-# @xarples/wolfi-react
+# wolfi-react
 
-> Modern and Beutiful UI Library
+> Modern and Beutiful ui library
 
-[![NPM](https://img.shields.io/npm/v/@xarples/wolfi-react.svg)](https://www.npmjs.com/package/@xarples/wolfi-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/wolfi-react.svg)](https://www.npmjs.com/package/wolfi-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save @xarples/wolfi-react
+npm install --save wolfi-react
 ```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import * as React from 'react'
 
-import { Button } from '@xarples/wolfi-react'
+import MyComponent from 'wolfi-react'
 
-class Example extends Component {
-  render() {
-    return <Button />
+class Example extends React.Component {
+  render () {
+    return (
+      <MyComponent />
+    )
   }
 }
 ```

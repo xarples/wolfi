@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { ExampleComponent } from '@xarples/wolfi-react'
-import '@xarples/wolfi-react/dist/index.css'
+import ExampleComponent from 'wolfi-react'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+export default class App extends Component {
+  render () {
+    return (
+      <div>
+        <ExampleComponent text='Modern React component module' />
+      </div>
+    )
+  }
 }
-
-export default App
